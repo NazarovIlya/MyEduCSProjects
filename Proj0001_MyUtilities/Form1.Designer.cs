@@ -35,11 +35,11 @@
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCounter = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.tabPageConverter = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageCounter.SuspendLayout();
@@ -68,7 +68,7 @@
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(166, 34);
+            this.tsmiExit.Size = new System.Drawing.Size(270, 34);
             this.tsmiExit.Text = "Выход";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
@@ -83,14 +83,14 @@
             // tsmiAbout
             // 
             this.tsmiAbout.Name = "tsmiAbout";
-            this.tsmiAbout.Size = new System.Drawing.Size(270, 34);
+            this.tsmiAbout.Size = new System.Drawing.Size(227, 34);
             this.tsmiAbout.Text = "О программе";
             this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPageCounter);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPageConverter);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 33);
             this.tabControl1.Name = "tabControl1";
@@ -112,37 +112,16 @@
             this.tabPageCounter.Text = "Счетчик";
             this.tabPageCounter.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // button3
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(867, 540);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCount.Location = new System.Drawing.Point(376, 245);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(34, 39);
-            this.lblCount.TabIndex = 0;
-            this.lblCount.Text = "0";
-            this.lblCount.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(311, 58);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 84);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(611, 222);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(154, 84);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Сброс";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -155,16 +134,37 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button1
             // 
-            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(611, 222);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 84);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Сброс";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(311, 58);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 84);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCount.Location = new System.Drawing.Point(376, 245);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(34, 39);
+            this.lblCount.TabIndex = 0;
+            this.lblCount.Text = "0";
+            this.lblCount.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // tabPageConverter
+            // 
+            this.tabPageConverter.Location = new System.Drawing.Point(4, 34);
+            this.tabPageConverter.Name = "tabPageConverter";
+            this.tabPageConverter.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageConverter.Size = new System.Drawing.Size(932, 600);
+            this.tabPageConverter.TabIndex = 1;
+            this.tabPageConverter.Text = "tabPage2";
+            this.tabPageConverter.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -195,7 +195,7 @@
         private ToolStripMenuItem tsmiAbout;
         private TabControl tabControl1;
         private TabPage tabPageCounter;
-        private TabPage tabPage2;
+        private TabPage tabPageConverter;
         private Button button3;
         private Button button2;
         private Button button1;
