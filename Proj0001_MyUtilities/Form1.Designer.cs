@@ -163,7 +163,7 @@
             this.tabPageConverter.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageConverter.Size = new System.Drawing.Size(932, 600);
             this.tabPageConverter.TabIndex = 1;
-            this.tabPageConverter.Text = "tabPage2";
+            this.tabPageConverter.Text = "Конвертер";
             this.tabPageConverter.UseVisualStyleBackColor = true;
             // 
             // MainForm
