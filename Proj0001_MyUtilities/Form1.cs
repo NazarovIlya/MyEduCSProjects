@@ -3,9 +3,11 @@ namespace Proj0001_MyUtilities
     public partial class MainForm : Form
     {
         int count = 0;
+        Random random;
         public MainForm()
         {
             InitializeComponent();
+            random = new Random();
         }
 
         private void tsmiAbout_Click(object sender, EventArgs e)
@@ -34,6 +36,13 @@ namespace Proj0001_MyUtilities
         {
             count = 0;
             lblCount.Text = count.ToString();
+        }
+
+        private void btnGetRandom_Click(object sender, EventArgs e)
+        {
+            int randomN = 0;
+            randomN = random.Next(Convert.ToInt32(numericMin.Value), Convert.ToInt32(numericMax.Value) + 1);
+            lblRandomNumber.Text = randomN.ToString();
         }
     }
 }
