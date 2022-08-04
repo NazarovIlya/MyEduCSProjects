@@ -40,6 +40,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
             this.tabPageGenerator = new System.Windows.Forms.TabPage();
+            this.btnCopyRandom = new System.Windows.Forms.Button();
             this.btnTxtBxClear = new System.Windows.Forms.Button();
             this.richTxtBxRandomNumbers = new System.Windows.Forms.RichTextBox();
             this.numericMax = new System.Windows.Forms.NumericUpDown();
@@ -48,7 +49,7 @@
             this.lblMin = new System.Windows.Forms.Label();
             this.lblRandomNumber = new System.Windows.Forms.Label();
             this.btnGetRandom = new System.Windows.Forms.Button();
-            this.btnCopyRandom = new System.Windows.Forms.Button();
+            this.chBxRepet = new System.Windows.Forms.CheckBox();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.tabPageCounter.SuspendLayout();
@@ -169,6 +170,7 @@
             // 
             // tabPageGenerator
             // 
+            this.tabPageGenerator.Controls.Add(this.chBxRepet);
             this.tabPageGenerator.Controls.Add(this.btnCopyRandom);
             this.tabPageGenerator.Controls.Add(this.btnTxtBxClear);
             this.tabPageGenerator.Controls.Add(this.richTxtBxRandomNumbers);
@@ -186,6 +188,17 @@
             this.tabPageGenerator.Text = "Генератор";
             this.tabPageGenerator.UseVisualStyleBackColor = true;
             // 
+            // btnCopyRandom
+            // 
+            this.btnCopyRandom.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCopyRandom.Location = new System.Drawing.Point(140, 305);
+            this.btnCopyRandom.Name = "btnCopyRandom";
+            this.btnCopyRandom.Size = new System.Drawing.Size(231, 68);
+            this.btnCopyRandom.TabIndex = 9;
+            this.btnCopyRandom.Text = "Копировать";
+            this.btnCopyRandom.UseVisualStyleBackColor = true;
+            this.btnCopyRandom.Click += new System.EventHandler(this.btnCopyRandom_Click);
+            // 
             // btnTxtBxClear
             // 
             this.btnTxtBxClear.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -199,9 +212,9 @@
             // 
             // richTxtBxRandomNumbers
             // 
-            this.richTxtBxRandomNumbers.Location = new System.Drawing.Point(670, 211);
+            this.richTxtBxRandomNumbers.Location = new System.Drawing.Point(670, 238);
             this.richTxtBxRandomNumbers.Name = "richTxtBxRandomNumbers";
-            this.richTxtBxRandomNumbers.Size = new System.Drawing.Size(229, 341);
+            this.richTxtBxRandomNumbers.Size = new System.Drawing.Size(229, 314);
             this.richTxtBxRandomNumbers.TabIndex = 7;
             this.richTxtBxRandomNumbers.Text = "";
             this.richTxtBxRandomNumbers.TextChanged += new System.EventHandler(this.richTxtBxRandomNumbers_TextChanged);
@@ -285,16 +298,16 @@
             this.btnGetRandom.UseVisualStyleBackColor = true;
             this.btnGetRandom.Click += new System.EventHandler(this.btnGetRandom_Click);
             // 
-            // btnCopyRandom
+            // chBxRepet
             // 
-            this.btnCopyRandom.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCopyRandom.Location = new System.Drawing.Point(140, 305);
-            this.btnCopyRandom.Name = "btnCopyRandom";
-            this.btnCopyRandom.Size = new System.Drawing.Size(231, 68);
-            this.btnCopyRandom.TabIndex = 9;
-            this.btnCopyRandom.Text = "Копировать";
-            this.btnCopyRandom.UseVisualStyleBackColor = true;
-            this.btnCopyRandom.Click += new System.EventHandler(this.btnCopyRandom_Click);
+            this.chBxRepet.AutoSize = true;
+            this.chBxRepet.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.chBxRepet.Location = new System.Drawing.Point(670, 181);
+            this.chBxRepet.Name = "chBxRepet";
+            this.chBxRepet.Size = new System.Drawing.Size(221, 37);
+            this.chBxRepet.TabIndex = 10;
+            this.chBxRepet.Text = "без повторений";
+            this.chBxRepet.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -343,5 +356,6 @@
         private RichTextBox richTxtBxRandomNumbers;
         private Button btnTxtBxClear;
         private Button btnCopyRandom;
+        private CheckBox chBxRepet;
     }
 }
