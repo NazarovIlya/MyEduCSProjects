@@ -43,6 +43,33 @@ namespace Proj0001_MyUtilities
             int randomN = 0;
             randomN = random.Next(Convert.ToInt32(numericMin.Value), Convert.ToInt32(numericMax.Value) + 1);
             lblRandomNumber.Text = randomN.ToString();
+            richTxtBxRandomNumbers.AppendText(randomN + "\n");
+            if (richTxtBxRandomNumbers.Text.IndexOf(randomN.ToString()) == -1);
+        }
+
+        private void lblMax_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericMax_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTxtBxRandomNumbers_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnTxtBxClear_Click(object sender, EventArgs e)
+        {
+            richTxtBxRandomNumbers.Clear();
+        }
+
+        private void btnCopyRandom_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(richTxtBxRandomNumbers.Text);
         }
     }
 }

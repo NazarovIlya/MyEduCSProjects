@@ -40,12 +40,15 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
             this.tabPageGenerator = new System.Windows.Forms.TabPage();
+            this.btnTxtBxClear = new System.Windows.Forms.Button();
+            this.richTxtBxRandomNumbers = new System.Windows.Forms.RichTextBox();
             this.numericMax = new System.Windows.Forms.NumericUpDown();
             this.numericMin = new System.Windows.Forms.NumericUpDown();
             this.lblMax = new System.Windows.Forms.Label();
             this.lblMin = new System.Windows.Forms.Label();
             this.lblRandomNumber = new System.Windows.Forms.Label();
             this.btnGetRandom = new System.Windows.Forms.Button();
+            this.btnCopyRandom = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.tabPageCounter.SuspendLayout();
@@ -166,6 +169,9 @@
             // 
             // tabPageGenerator
             // 
+            this.tabPageGenerator.Controls.Add(this.btnCopyRandom);
+            this.tabPageGenerator.Controls.Add(this.btnTxtBxClear);
+            this.tabPageGenerator.Controls.Add(this.richTxtBxRandomNumbers);
             this.tabPageGenerator.Controls.Add(this.numericMax);
             this.tabPageGenerator.Controls.Add(this.numericMin);
             this.tabPageGenerator.Controls.Add(this.lblMax);
@@ -180,10 +186,30 @@
             this.tabPageGenerator.Text = "Генератор";
             this.tabPageGenerator.UseVisualStyleBackColor = true;
             // 
+            // btnTxtBxClear
+            // 
+            this.btnTxtBxClear.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTxtBxClear.Location = new System.Drawing.Point(140, 211);
+            this.btnTxtBxClear.Name = "btnTxtBxClear";
+            this.btnTxtBxClear.Size = new System.Drawing.Size(231, 67);
+            this.btnTxtBxClear.TabIndex = 8;
+            this.btnTxtBxClear.Text = "Очистить";
+            this.btnTxtBxClear.UseVisualStyleBackColor = true;
+            this.btnTxtBxClear.Click += new System.EventHandler(this.btnTxtBxClear_Click);
+            // 
+            // richTxtBxRandomNumbers
+            // 
+            this.richTxtBxRandomNumbers.Location = new System.Drawing.Point(670, 211);
+            this.richTxtBxRandomNumbers.Name = "richTxtBxRandomNumbers";
+            this.richTxtBxRandomNumbers.Size = new System.Drawing.Size(229, 341);
+            this.richTxtBxRandomNumbers.TabIndex = 7;
+            this.richTxtBxRandomNumbers.Text = "";
+            this.richTxtBxRandomNumbers.TextChanged += new System.EventHandler(this.richTxtBxRandomNumbers_TextChanged);
+            // 
             // numericMax
             // 
             this.numericMax.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.numericMax.Location = new System.Drawing.Point(173, 310);
+            this.numericMax.Location = new System.Drawing.Point(140, 123);
             this.numericMax.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -197,11 +223,12 @@
             this.numericMax.Name = "numericMax";
             this.numericMax.Size = new System.Drawing.Size(220, 41);
             this.numericMax.TabIndex = 5;
+            this.numericMax.ValueChanged += new System.EventHandler(this.numericMax_ValueChanged);
             // 
             // numericMin
             // 
             this.numericMin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.numericMin.Location = new System.Drawing.Point(173, 130);
+            this.numericMin.Location = new System.Drawing.Point(140, 47);
             this.numericMin.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -220,17 +247,18 @@
             // 
             this.lblMax.AutoSize = true;
             this.lblMax.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMax.Location = new System.Drawing.Point(81, 312);
+            this.lblMax.Location = new System.Drawing.Point(48, 125);
             this.lblMax.Name = "lblMax";
             this.lblMax.Size = new System.Drawing.Size(47, 35);
             this.lblMax.TabIndex = 3;
             this.lblMax.Text = "До";
+            this.lblMax.Click += new System.EventHandler(this.lblMax_Click);
             // 
             // lblMin
             // 
             this.lblMin.AutoSize = true;
             this.lblMin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMin.Location = new System.Drawing.Point(81, 136);
+            this.lblMin.Location = new System.Drawing.Point(48, 53);
             this.lblMin.Name = "lblMin";
             this.lblMin.Size = new System.Drawing.Size(45, 35);
             this.lblMin.TabIndex = 2;
@@ -240,7 +268,7 @@
             // 
             this.lblRandomNumber.AutoSize = true;
             this.lblRandomNumber.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRandomNumber.Location = new System.Drawing.Point(699, 316);
+            this.lblRandomNumber.Location = new System.Drawing.Point(492, 88);
             this.lblRandomNumber.Name = "lblRandomNumber";
             this.lblRandomNumber.Size = new System.Drawing.Size(30, 35);
             this.lblRandomNumber.TabIndex = 1;
@@ -249,13 +277,24 @@
             // btnGetRandom
             // 
             this.btnGetRandom.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnGetRandom.Location = new System.Drawing.Point(605, 130);
+            this.btnGetRandom.Location = new System.Drawing.Point(670, 47);
             this.btnGetRandom.Name = "btnGetRandom";
             this.btnGetRandom.Size = new System.Drawing.Size(229, 117);
             this.btnGetRandom.TabIndex = 0;
             this.btnGetRandom.Text = "Сгенерировать случайное число";
             this.btnGetRandom.UseVisualStyleBackColor = true;
             this.btnGetRandom.Click += new System.EventHandler(this.btnGetRandom_Click);
+            // 
+            // btnCopyRandom
+            // 
+            this.btnCopyRandom.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCopyRandom.Location = new System.Drawing.Point(140, 305);
+            this.btnCopyRandom.Name = "btnCopyRandom";
+            this.btnCopyRandom.Size = new System.Drawing.Size(231, 68);
+            this.btnCopyRandom.TabIndex = 9;
+            this.btnCopyRandom.Text = "Копировать";
+            this.btnCopyRandom.UseVisualStyleBackColor = true;
+            this.btnCopyRandom.Click += new System.EventHandler(this.btnCopyRandom_Click);
             // 
             // MainForm
             // 
@@ -301,5 +340,8 @@
         private Label lblMax;
         private Label lblMin;
         private Label lblRandomNumber;
+        private RichTextBox richTxtBxRandomNumbers;
+        private Button btnTxtBxClear;
+        private Button btnCopyRandom;
     }
 }
