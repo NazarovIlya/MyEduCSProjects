@@ -7,7 +7,7 @@ namespace Proj0001_MyUtilities
         public MainForm()
         {
             InitializeComponent();
-            random = new Random();
+            random = new Random((int)DateTime.Now.Ticks);
         }
 
         private void tsmiAbout_Click(object sender, EventArgs e)
@@ -42,9 +42,8 @@ namespace Proj0001_MyUtilities
         {
             int randomN = 0;
             randomN = random.Next(Convert.ToInt32(numericMin.Value), Convert.ToInt32(numericMax.Value) + 1);
-            int lastRandom = randomN + 1;
             lblRandomNumber.Text = randomN.ToString();
-            richTxtBxRandomNumbers.AppendText(randomN + "\n");
+            richTxtBxRandomNumbers.AppendText(lblRandomNumber.Text + "\n");
         }
 
         private void lblMax_Click(object sender, EventArgs e)
