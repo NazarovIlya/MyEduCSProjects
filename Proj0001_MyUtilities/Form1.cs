@@ -42,16 +42,9 @@ namespace Proj0001_MyUtilities
         {
             int randomN = 0;
             randomN = random.Next(Convert.ToInt32(numericMin.Value), Convert.ToInt32(numericMax.Value) + 1);
+            int lastRandom = randomN + 1;
             lblRandomNumber.Text = randomN.ToString();
-            if (chBxRepet.Checked == true)
-            {
-                if (richTxtBxRandomNumbers.Text.IndexOf(randomN.ToString()) == -1)
-                    richTxtBxRandomNumbers.AppendText(randomN + "\n");
-            }
-            else richTxtBxRandomNumbers.AppendText(randomN + "\n");
-            
-
-            
+            richTxtBxRandomNumbers.AppendText(randomN + "\n");
         }
 
         private void lblMax_Click(object sender, EventArgs e)

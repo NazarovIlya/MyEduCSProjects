@@ -34,11 +34,6 @@
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl = new System.Windows.Forms.TabControl();
-            this.tabPageCounter = new System.Windows.Forms.TabPage();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.btnPlus = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnMinus = new System.Windows.Forms.Button();
             this.tabPageGenerator = new System.Windows.Forms.TabPage();
             this.btnCopyRandom = new System.Windows.Forms.Button();
             this.btnTxtBxClear = new System.Windows.Forms.Button();
@@ -49,13 +44,17 @@
             this.lblMin = new System.Windows.Forms.Label();
             this.lblRandomNumber = new System.Windows.Forms.Label();
             this.btnGetRandom = new System.Windows.Forms.Button();
-            this.chBxRepet = new System.Windows.Forms.CheckBox();
+            this.tabPageCounter = new System.Windows.Forms.TabPage();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.btnPlus = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
-            this.tabPageCounter.SuspendLayout();
             this.tabPageGenerator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMin)).BeginInit();
+            this.tabPageCounter.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -102,8 +101,8 @@
             // 
             // mainTabControl
             // 
-            this.mainTabControl.Controls.Add(this.tabPageCounter);
             this.mainTabControl.Controls.Add(this.tabPageGenerator);
+            this.mainTabControl.Controls.Add(this.tabPageCounter);
             this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTabControl.Location = new System.Drawing.Point(0, 33);
             this.mainTabControl.Name = "mainTabControl";
@@ -111,66 +110,8 @@
             this.mainTabControl.Size = new System.Drawing.Size(993, 621);
             this.mainTabControl.TabIndex = 1;
             // 
-            // tabPageCounter
-            // 
-            this.tabPageCounter.Controls.Add(this.lblCount);
-            this.tabPageCounter.Controls.Add(this.btnPlus);
-            this.tabPageCounter.Controls.Add(this.btnReset);
-            this.tabPageCounter.Controls.Add(this.btnMinus);
-            this.tabPageCounter.Location = new System.Drawing.Point(4, 34);
-            this.tabPageCounter.Name = "tabPageCounter";
-            this.tabPageCounter.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCounter.Size = new System.Drawing.Size(985, 583);
-            this.tabPageCounter.TabIndex = 0;
-            this.tabPageCounter.Text = "Счетчик";
-            this.tabPageCounter.UseVisualStyleBackColor = true;
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCount.Location = new System.Drawing.Point(442, 248);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(34, 39);
-            this.lblCount.TabIndex = 4;
-            this.lblCount.Text = "0";
-            // 
-            // btnPlus
-            // 
-            this.btnPlus.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPlus.Location = new System.Drawing.Point(376, 72);
-            this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(177, 104);
-            this.btnPlus.TabIndex = 3;
-            this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnReset.Location = new System.Drawing.Point(679, 215);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(177, 104);
-            this.btnReset.TabIndex = 2;
-            this.btnReset.Text = "Сброс";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnMinus
-            // 
-            this.btnMinus.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMinus.Location = new System.Drawing.Point(376, 365);
-            this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(177, 104);
-            this.btnMinus.TabIndex = 1;
-            this.btnMinus.Text = "-";
-            this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
-            // 
             // tabPageGenerator
             // 
-            this.tabPageGenerator.Controls.Add(this.chBxRepet);
             this.tabPageGenerator.Controls.Add(this.btnCopyRandom);
             this.tabPageGenerator.Controls.Add(this.btnTxtBxClear);
             this.tabPageGenerator.Controls.Add(this.richTxtBxRandomNumbers);
@@ -212,9 +153,9 @@
             // 
             // richTxtBxRandomNumbers
             // 
-            this.richTxtBxRandomNumbers.Location = new System.Drawing.Point(670, 238);
+            this.richTxtBxRandomNumbers.Location = new System.Drawing.Point(670, 211);
             this.richTxtBxRandomNumbers.Name = "richTxtBxRandomNumbers";
-            this.richTxtBxRandomNumbers.Size = new System.Drawing.Size(229, 314);
+            this.richTxtBxRandomNumbers.Size = new System.Drawing.Size(229, 341);
             this.richTxtBxRandomNumbers.TabIndex = 7;
             this.richTxtBxRandomNumbers.Text = "";
             this.richTxtBxRandomNumbers.TextChanged += new System.EventHandler(this.richTxtBxRandomNumbers_TextChanged);
@@ -298,16 +239,62 @@
             this.btnGetRandom.UseVisualStyleBackColor = true;
             this.btnGetRandom.Click += new System.EventHandler(this.btnGetRandom_Click);
             // 
-            // chBxRepet
+            // tabPageCounter
             // 
-            this.chBxRepet.AutoSize = true;
-            this.chBxRepet.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.chBxRepet.Location = new System.Drawing.Point(670, 181);
-            this.chBxRepet.Name = "chBxRepet";
-            this.chBxRepet.Size = new System.Drawing.Size(221, 37);
-            this.chBxRepet.TabIndex = 10;
-            this.chBxRepet.Text = "без повторений";
-            this.chBxRepet.UseVisualStyleBackColor = true;
+            this.tabPageCounter.Controls.Add(this.lblCount);
+            this.tabPageCounter.Controls.Add(this.btnPlus);
+            this.tabPageCounter.Controls.Add(this.btnReset);
+            this.tabPageCounter.Controls.Add(this.btnMinus);
+            this.tabPageCounter.Location = new System.Drawing.Point(4, 34);
+            this.tabPageCounter.Name = "tabPageCounter";
+            this.tabPageCounter.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCounter.Size = new System.Drawing.Size(985, 583);
+            this.tabPageCounter.TabIndex = 0;
+            this.tabPageCounter.Text = "Счетчик";
+            this.tabPageCounter.UseVisualStyleBackColor = true;
+            // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCount.Location = new System.Drawing.Point(442, 248);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(34, 39);
+            this.lblCount.TabIndex = 4;
+            this.lblCount.Text = "0";
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPlus.Location = new System.Drawing.Point(376, 72);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(177, 104);
+            this.btnPlus.TabIndex = 3;
+            this.btnPlus.Text = "+";
+            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.Location = new System.Drawing.Point(679, 215);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(177, 104);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.Text = "Сброс";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMinus.Location = new System.Drawing.Point(376, 365);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(177, 104);
+            this.btnMinus.TabIndex = 1;
+            this.btnMinus.Text = "-";
+            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
             // MainForm
             // 
@@ -322,12 +309,12 @@
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.mainTabControl.ResumeLayout(false);
-            this.tabPageCounter.ResumeLayout(false);
-            this.tabPageCounter.PerformLayout();
             this.tabPageGenerator.ResumeLayout(false);
             this.tabPageGenerator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMin)).EndInit();
+            this.tabPageCounter.ResumeLayout(false);
+            this.tabPageCounter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,6 +343,5 @@
         private RichTextBox richTxtBxRandomNumbers;
         private Button btnTxtBxClear;
         private Button btnCopyRandom;
-        private CheckBox chBxRepet;
     }
 }
