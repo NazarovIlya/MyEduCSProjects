@@ -49,6 +49,7 @@
             this.btnPlus = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
+            this.lblResetInterval = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.tabPageGenerator.SuspendLayout();
@@ -112,6 +113,7 @@
             // 
             // tabPageGenerator
             // 
+            this.tabPageGenerator.Controls.Add(this.lblResetInterval);
             this.tabPageGenerator.Controls.Add(this.btnCopyRandom);
             this.tabPageGenerator.Controls.Add(this.btnTxtBxClear);
             this.tabPageGenerator.Controls.Add(this.richTxtBxRandomNumbers);
@@ -132,9 +134,9 @@
             // btnCopyRandom
             // 
             this.btnCopyRandom.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCopyRandom.Location = new System.Drawing.Point(140, 305);
+            this.btnCopyRandom.Location = new System.Drawing.Point(670, 286);
             this.btnCopyRandom.Name = "btnCopyRandom";
-            this.btnCopyRandom.Size = new System.Drawing.Size(231, 68);
+            this.btnCopyRandom.Size = new System.Drawing.Size(223, 68);
             this.btnCopyRandom.TabIndex = 9;
             this.btnCopyRandom.Text = "Копировать";
             this.btnCopyRandom.UseVisualStyleBackColor = true;
@@ -143,9 +145,9 @@
             // btnTxtBxClear
             // 
             this.btnTxtBxClear.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTxtBxClear.Location = new System.Drawing.Point(140, 211);
+            this.btnTxtBxClear.Location = new System.Drawing.Point(670, 192);
             this.btnTxtBxClear.Name = "btnTxtBxClear";
-            this.btnTxtBxClear.Size = new System.Drawing.Size(231, 67);
+            this.btnTxtBxClear.Size = new System.Drawing.Size(223, 67);
             this.btnTxtBxClear.TabIndex = 8;
             this.btnTxtBxClear.Text = "Очистить";
             this.btnTxtBxClear.UseVisualStyleBackColor = true;
@@ -153,9 +155,9 @@
             // 
             // richTxtBxRandomNumbers
             // 
-            this.richTxtBxRandomNumbers.Location = new System.Drawing.Point(670, 211);
+            this.richTxtBxRandomNumbers.Location = new System.Drawing.Point(406, 192);
             this.richTxtBxRandomNumbers.Name = "richTxtBxRandomNumbers";
-            this.richTxtBxRandomNumbers.Size = new System.Drawing.Size(229, 341);
+            this.richTxtBxRandomNumbers.Size = new System.Drawing.Size(229, 368);
             this.richTxtBxRandomNumbers.TabIndex = 7;
             this.richTxtBxRandomNumbers.Text = "";
             this.richTxtBxRandomNumbers.TextChanged += new System.EventHandler(this.richTxtBxRandomNumbers_TextChanged);
@@ -296,6 +298,17 @@
             this.btnMinus.UseVisualStyleBackColor = true;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
+            // lblResetInterval
+            // 
+            this.lblResetInterval.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblResetInterval.Location = new System.Drawing.Point(140, 204);
+            this.lblResetInterval.Name = "lblResetInterval";
+            this.lblResetInterval.Size = new System.Drawing.Size(220, 67);
+            this.lblResetInterval.TabIndex = 11;
+            this.lblResetInterval.Text = "Сбросить";
+            this.lblResetInterval.UseVisualStyleBackColor = true;
+            this.lblResetInterval.Click += new System.EventHandler(this.lblResetInterval_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -343,5 +356,6 @@
         private RichTextBox richTxtBxRandomNumbers;
         private Button btnTxtBxClear;
         private Button btnCopyRandom;
+        private Button lblResetInterval;
     }
 }

@@ -70,5 +70,13 @@ namespace Proj0001_MyUtilities
         {
             Clipboard.SetText(richTxtBxRandomNumbers.Text);
         }
+
+        private void lblResetInterval_Click(object sender, EventArgs e)
+        {
+            numericMin.ResetText();
+            numericMin.Value = 0;
+            numericMax.ResetText();
+            numericMax.Value = 0;
+        }
     }
 }
