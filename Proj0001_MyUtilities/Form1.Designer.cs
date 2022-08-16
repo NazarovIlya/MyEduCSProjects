@@ -31,9 +31,19 @@
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiNatepad = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertDate = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiNotepad = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl = new System.Windows.Forms.TabControl();
+            this.tabPageNotePad = new System.Windows.Forms.TabPage();
+            this.richTxtBxNotePad = new System.Windows.Forms.RichTextBox();
+            this.tabPageCounter = new System.Windows.Forms.TabPage();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.btnPlus = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
             this.tabPageGenerator = new System.Windows.Forms.TabPage();
             this.lblResetInterval = new System.Windows.Forms.Button();
             this.btnCopyRandom = new System.Windows.Forms.Button();
@@ -45,20 +55,13 @@
             this.lblMin = new System.Windows.Forms.Label();
             this.lblRandomNumber = new System.Windows.Forms.Label();
             this.btnGetRandom = new System.Windows.Forms.Button();
-            this.tabPageCounter = new System.Windows.Forms.TabPage();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.btnPlus = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnMinus = new System.Windows.Forms.Button();
-            this.tabPageNotePad = new System.Windows.Forms.TabPage();
-            this.richTxtBxNotePad = new System.Windows.Forms.RichTextBox();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
+            this.tabPageNotePad.SuspendLayout();
+            this.tabPageCounter.SuspendLayout();
             this.tabPageGenerator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMin)).BeginInit();
-            this.tabPageCounter.SuspendLayout();
-            this.tabPageNotePad.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -66,6 +69,7 @@
             this.MainMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiFile,
+            this.tsmiNatepad,
             this.tsmiHelp});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
@@ -87,6 +91,29 @@
             this.tsmiExit.Size = new System.Drawing.Size(166, 34);
             this.tsmiExit.Text = "Выход";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
+            // 
+            // tsmiNatepad
+            // 
+            this.tsmiNatepad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiInsertDate,
+            this.tsmiNotepad});
+            this.tsmiNatepad.Name = "tsmiNatepad";
+            this.tsmiNatepad.Size = new System.Drawing.Size(95, 29);
+            this.tsmiNatepad.Text = "Блокнот";
+            // 
+            // tsmiInsertDate
+            // 
+            this.tsmiInsertDate.Name = "tsmiInsertDate";
+            this.tsmiInsertDate.Size = new System.Drawing.Size(270, 34);
+            this.tsmiInsertDate.Text = "Вставить дату";
+            this.tsmiInsertDate.Click += new System.EventHandler(this.tsmiInsertDate_Click);
+            // 
+            // tsmiNotepad
+            // 
+            this.tsmiNotepad.Name = "tsmiNotepad";
+            this.tsmiNotepad.Size = new System.Drawing.Size(270, 34);
+            this.tsmiNotepad.Text = "Вставить время";
+            this.tsmiNotepad.Click += new System.EventHandler(this.tsmiNotepad_Click);
             // 
             // tsmiHelp
             // 
@@ -114,6 +141,83 @@
             this.mainTabControl.SelectedIndex = 0;
             this.mainTabControl.Size = new System.Drawing.Size(993, 621);
             this.mainTabControl.TabIndex = 1;
+            // 
+            // tabPageNotePad
+            // 
+            this.tabPageNotePad.Controls.Add(this.richTxtBxNotePad);
+            this.tabPageNotePad.Location = new System.Drawing.Point(4, 34);
+            this.tabPageNotePad.Name = "tabPageNotePad";
+            this.tabPageNotePad.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageNotePad.Size = new System.Drawing.Size(985, 583);
+            this.tabPageNotePad.TabIndex = 2;
+            this.tabPageNotePad.Text = "Блокнот";
+            this.tabPageNotePad.UseVisualStyleBackColor = true;
+            // 
+            // richTxtBxNotePad
+            // 
+            this.richTxtBxNotePad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTxtBxNotePad.Location = new System.Drawing.Point(3, 3);
+            this.richTxtBxNotePad.Name = "richTxtBxNotePad";
+            this.richTxtBxNotePad.Size = new System.Drawing.Size(979, 577);
+            this.richTxtBxNotePad.TabIndex = 0;
+            this.richTxtBxNotePad.Text = "";
+            // 
+            // tabPageCounter
+            // 
+            this.tabPageCounter.Controls.Add(this.lblCount);
+            this.tabPageCounter.Controls.Add(this.btnPlus);
+            this.tabPageCounter.Controls.Add(this.btnReset);
+            this.tabPageCounter.Controls.Add(this.btnMinus);
+            this.tabPageCounter.Location = new System.Drawing.Point(4, 34);
+            this.tabPageCounter.Name = "tabPageCounter";
+            this.tabPageCounter.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCounter.Size = new System.Drawing.Size(985, 583);
+            this.tabPageCounter.TabIndex = 0;
+            this.tabPageCounter.Text = "Счетчик";
+            this.tabPageCounter.UseVisualStyleBackColor = true;
+            // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCount.Location = new System.Drawing.Point(442, 248);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(34, 39);
+            this.lblCount.TabIndex = 4;
+            this.lblCount.Text = "0";
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPlus.Location = new System.Drawing.Point(376, 72);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(177, 104);
+            this.btnPlus.TabIndex = 3;
+            this.btnPlus.Text = "+";
+            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.Location = new System.Drawing.Point(679, 215);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(177, 104);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.Text = "Сброс";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMinus.Location = new System.Drawing.Point(376, 365);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(177, 104);
+            this.btnMinus.TabIndex = 1;
+            this.btnMinus.Text = "-";
+            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
             // tabPageGenerator
             // 
@@ -256,83 +360,6 @@
             this.btnGetRandom.UseVisualStyleBackColor = true;
             this.btnGetRandom.Click += new System.EventHandler(this.btnGetRandom_Click);
             // 
-            // tabPageCounter
-            // 
-            this.tabPageCounter.Controls.Add(this.lblCount);
-            this.tabPageCounter.Controls.Add(this.btnPlus);
-            this.tabPageCounter.Controls.Add(this.btnReset);
-            this.tabPageCounter.Controls.Add(this.btnMinus);
-            this.tabPageCounter.Location = new System.Drawing.Point(4, 34);
-            this.tabPageCounter.Name = "tabPageCounter";
-            this.tabPageCounter.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCounter.Size = new System.Drawing.Size(985, 583);
-            this.tabPageCounter.TabIndex = 0;
-            this.tabPageCounter.Text = "Счетчик";
-            this.tabPageCounter.UseVisualStyleBackColor = true;
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCount.Location = new System.Drawing.Point(442, 248);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(34, 39);
-            this.lblCount.TabIndex = 4;
-            this.lblCount.Text = "0";
-            // 
-            // btnPlus
-            // 
-            this.btnPlus.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPlus.Location = new System.Drawing.Point(376, 72);
-            this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(177, 104);
-            this.btnPlus.TabIndex = 3;
-            this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnReset.Location = new System.Drawing.Point(679, 215);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(177, 104);
-            this.btnReset.TabIndex = 2;
-            this.btnReset.Text = "Сброс";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnMinus
-            // 
-            this.btnMinus.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMinus.Location = new System.Drawing.Point(376, 365);
-            this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(177, 104);
-            this.btnMinus.TabIndex = 1;
-            this.btnMinus.Text = "-";
-            this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
-            // 
-            // tabPageNotePad
-            // 
-            this.tabPageNotePad.Controls.Add(this.richTxtBxNotePad);
-            this.tabPageNotePad.Location = new System.Drawing.Point(4, 34);
-            this.tabPageNotePad.Name = "tabPageNotePad";
-            this.tabPageNotePad.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNotePad.Size = new System.Drawing.Size(985, 583);
-            this.tabPageNotePad.TabIndex = 2;
-            this.tabPageNotePad.Text = "Блокнот";
-            this.tabPageNotePad.UseVisualStyleBackColor = true;
-            // 
-            // richTxtBxNotePad
-            // 
-            this.richTxtBxNotePad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTxtBxNotePad.Location = new System.Drawing.Point(3, 3);
-            this.richTxtBxNotePad.Name = "richTxtBxNotePad";
-            this.richTxtBxNotePad.Size = new System.Drawing.Size(979, 577);
-            this.richTxtBxNotePad.TabIndex = 0;
-            this.richTxtBxNotePad.Text = "";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -346,13 +373,13 @@
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.mainTabControl.ResumeLayout(false);
+            this.tabPageNotePad.ResumeLayout(false);
+            this.tabPageCounter.ResumeLayout(false);
+            this.tabPageCounter.PerformLayout();
             this.tabPageGenerator.ResumeLayout(false);
             this.tabPageGenerator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMin)).EndInit();
-            this.tabPageCounter.ResumeLayout(false);
-            this.tabPageCounter.PerformLayout();
-            this.tabPageNotePad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,5 +411,8 @@
         private Button lblResetInterval;
         private TabPage tabPageNotePad;
         private RichTextBox richTxtBxNotePad;
+        private ToolStripMenuItem tsmiNatepad;
+        private ToolStripMenuItem tsmiInsertDate;
+        private ToolStripMenuItem tsmiNotepad;
     }
 }
