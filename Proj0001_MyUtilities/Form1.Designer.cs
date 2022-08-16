@@ -35,6 +35,7 @@
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.tabPageGenerator = new System.Windows.Forms.TabPage();
+            this.lblResetInterval = new System.Windows.Forms.Button();
             this.btnCopyRandom = new System.Windows.Forms.Button();
             this.btnTxtBxClear = new System.Windows.Forms.Button();
             this.richTxtBxRandomNumbers = new System.Windows.Forms.RichTextBox();
@@ -49,13 +50,15 @@
             this.btnPlus = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
-            this.lblResetInterval = new System.Windows.Forms.Button();
+            this.tabPageNotePad = new System.Windows.Forms.TabPage();
+            this.richTxtBxNotePad = new System.Windows.Forms.RichTextBox();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.tabPageGenerator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMin)).BeginInit();
             this.tabPageCounter.SuspendLayout();
+            this.tabPageNotePad.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -102,8 +105,9 @@
             // 
             // mainTabControl
             // 
-            this.mainTabControl.Controls.Add(this.tabPageGenerator);
+            this.mainTabControl.Controls.Add(this.tabPageNotePad);
             this.mainTabControl.Controls.Add(this.tabPageCounter);
+            this.mainTabControl.Controls.Add(this.tabPageGenerator);
             this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTabControl.Location = new System.Drawing.Point(0, 33);
             this.mainTabControl.Name = "mainTabControl";
@@ -130,6 +134,17 @@
             this.tabPageGenerator.TabIndex = 1;
             this.tabPageGenerator.Text = "Генератор";
             this.tabPageGenerator.UseVisualStyleBackColor = true;
+            // 
+            // lblResetInterval
+            // 
+            this.lblResetInterval.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblResetInterval.Location = new System.Drawing.Point(140, 204);
+            this.lblResetInterval.Name = "lblResetInterval";
+            this.lblResetInterval.Size = new System.Drawing.Size(220, 67);
+            this.lblResetInterval.TabIndex = 11;
+            this.lblResetInterval.Text = "Сбросить";
+            this.lblResetInterval.UseVisualStyleBackColor = true;
+            this.lblResetInterval.Click += new System.EventHandler(this.lblResetInterval_Click);
             // 
             // btnCopyRandom
             // 
@@ -298,16 +313,25 @@
             this.btnMinus.UseVisualStyleBackColor = true;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
-            // lblResetInterval
+            // tabPageNotePad
             // 
-            this.lblResetInterval.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblResetInterval.Location = new System.Drawing.Point(140, 204);
-            this.lblResetInterval.Name = "lblResetInterval";
-            this.lblResetInterval.Size = new System.Drawing.Size(220, 67);
-            this.lblResetInterval.TabIndex = 11;
-            this.lblResetInterval.Text = "Сбросить";
-            this.lblResetInterval.UseVisualStyleBackColor = true;
-            this.lblResetInterval.Click += new System.EventHandler(this.lblResetInterval_Click);
+            this.tabPageNotePad.Controls.Add(this.richTxtBxNotePad);
+            this.tabPageNotePad.Location = new System.Drawing.Point(4, 34);
+            this.tabPageNotePad.Name = "tabPageNotePad";
+            this.tabPageNotePad.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageNotePad.Size = new System.Drawing.Size(985, 583);
+            this.tabPageNotePad.TabIndex = 2;
+            this.tabPageNotePad.Text = "Блокнот";
+            this.tabPageNotePad.UseVisualStyleBackColor = true;
+            // 
+            // richTxtBxNotePad
+            // 
+            this.richTxtBxNotePad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTxtBxNotePad.Location = new System.Drawing.Point(3, 3);
+            this.richTxtBxNotePad.Name = "richTxtBxNotePad";
+            this.richTxtBxNotePad.Size = new System.Drawing.Size(979, 577);
+            this.richTxtBxNotePad.TabIndex = 0;
+            this.richTxtBxNotePad.Text = "";
             // 
             // MainForm
             // 
@@ -328,6 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericMin)).EndInit();
             this.tabPageCounter.ResumeLayout(false);
             this.tabPageCounter.PerformLayout();
+            this.tabPageNotePad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,5 +382,7 @@
         private Button btnTxtBxClear;
         private Button btnCopyRandom;
         private Button lblResetInterval;
+        private TabPage tabPageNotePad;
+        private RichTextBox richTxtBxNotePad;
     }
 }
