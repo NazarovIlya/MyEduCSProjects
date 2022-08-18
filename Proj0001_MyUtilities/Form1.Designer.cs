@@ -55,6 +55,7 @@
             this.lblMin = new System.Windows.Forms.Label();
             this.lblRandomNumber = new System.Windows.Forms.Label();
             this.btnGetRandom = new System.Windows.Forms.Button();
+            this.tsmiClear = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.tabPageNotePad.SuspendLayout();
@@ -96,7 +97,8 @@
             // 
             this.tsmiNatepad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiInsertDate,
-            this.tsmiNotepad});
+            this.tsmiNotepad,
+            this.tsmiClear});
             this.tsmiNatepad.Name = "tsmiNatepad";
             this.tsmiNatepad.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.D)));
@@ -366,6 +368,15 @@
             this.btnGetRandom.UseVisualStyleBackColor = true;
             this.btnGetRandom.Click += new System.EventHandler(this.btnGetRandom_Click);
             // 
+            // tsmiClear
+            // 
+            this.tsmiClear.Name = "tsmiClear";
+            this.tsmiClear.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
+            this.tsmiClear.Size = new System.Drawing.Size(354, 34);
+            this.tsmiClear.Text = "Очистить";
+            this.tsmiClear.Click += new System.EventHandler(this.tsmiClear_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -420,5 +431,6 @@
         private ToolStripMenuItem tsmiNatepad;
         private ToolStripMenuItem tsmiInsertDate;
         private ToolStripMenuItem tsmiNotepad;
+        private ToolStripMenuItem tsmiClear;
     }
 }
