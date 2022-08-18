@@ -98,20 +98,26 @@
             this.tsmiInsertDate,
             this.tsmiNotepad});
             this.tsmiNatepad.Name = "tsmiNatepad";
+            this.tsmiNatepad.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
             this.tsmiNatepad.Size = new System.Drawing.Size(95, 29);
             this.tsmiNatepad.Text = "Блокнот";
             // 
             // tsmiInsertDate
             // 
             this.tsmiInsertDate.Name = "tsmiInsertDate";
-            this.tsmiInsertDate.Size = new System.Drawing.Size(270, 34);
+            this.tsmiInsertDate.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.tsmiInsertDate.Size = new System.Drawing.Size(354, 34);
             this.tsmiInsertDate.Text = "Вставить дату";
             this.tsmiInsertDate.Click += new System.EventHandler(this.tsmiInsertDate_Click);
             // 
             // tsmiNotepad
             // 
             this.tsmiNotepad.Name = "tsmiNotepad";
-            this.tsmiNotepad.Size = new System.Drawing.Size(270, 34);
+            this.tsmiNotepad.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+            this.tsmiNotepad.Size = new System.Drawing.Size(354, 34);
             this.tsmiNotepad.Text = "Вставить время";
             this.tsmiNotepad.Click += new System.EventHandler(this.tsmiNotepad_Click);
             // 
