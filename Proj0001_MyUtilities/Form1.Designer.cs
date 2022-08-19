@@ -34,6 +34,7 @@
             this.tsmiNatepad = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiInsertDate = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNotepad = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiClear = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl = new System.Windows.Forms.TabControl();
@@ -55,7 +56,9 @@
             this.lblMin = new System.Windows.Forms.Label();
             this.lblRandomNumber = new System.Windows.Forms.Label();
             this.btnGetRandom = new System.Windows.Forms.Button();
-            this.tsmiClear = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.tabPageNotePad.SuspendLayout();
@@ -98,7 +101,10 @@
             this.tsmiNatepad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiInsertDate,
             this.tsmiNotepad,
-            this.tsmiClear});
+            this.tsmiClear,
+            this.toolStripMenuItem1,
+            this.tsmiSave,
+            this.tsmiLoad});
             this.tsmiNatepad.Name = "tsmiNatepad";
             this.tsmiNatepad.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.D)));
@@ -122,6 +128,15 @@
             this.tsmiNotepad.Size = new System.Drawing.Size(354, 34);
             this.tsmiNotepad.Text = "Вставить время";
             this.tsmiNotepad.Click += new System.EventHandler(this.tsmiNotepad_Click);
+            // 
+            // tsmiClear
+            // 
+            this.tsmiClear.Name = "tsmiClear";
+            this.tsmiClear.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
+            this.tsmiClear.Size = new System.Drawing.Size(354, 34);
+            this.tsmiClear.Text = "Очистить";
+            this.tsmiClear.Click += new System.EventHandler(this.tsmiClear_Click);
             // 
             // tsmiHelp
             // 
@@ -368,14 +383,27 @@
             this.btnGetRandom.UseVisualStyleBackColor = true;
             this.btnGetRandom.Click += new System.EventHandler(this.btnGetRandom_Click);
             // 
-            // tsmiClear
+            // toolStripMenuItem1
             // 
-            this.tsmiClear.Name = "tsmiClear";
-            this.tsmiClear.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.C)));
-            this.tsmiClear.Size = new System.Drawing.Size(354, 34);
-            this.tsmiClear.Text = "Очистить";
-            this.tsmiClear.Click += new System.EventHandler(this.tsmiClear_Click);
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(351, 6);
+            // 
+            // tsmiSave
+            // 
+            this.tsmiSave.Name = "tsmiSave";
+            this.tsmiSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.tsmiSave.Size = new System.Drawing.Size(354, 34);
+            this.tsmiSave.Text = "Сохранить";
+            this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
+            // 
+            // tsmiLoad
+            // 
+            this.tsmiLoad.Name = "tsmiLoad";
+            this.tsmiLoad.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.tsmiLoad.Size = new System.Drawing.Size(354, 34);
+            this.tsmiLoad.Text = "Загрузить";
+            this.tsmiLoad.Click += new System.EventHandler(this.tsmiLoad_Click);
             // 
             // MainForm
             // 
@@ -432,5 +460,8 @@
         private ToolStripMenuItem tsmiInsertDate;
         private ToolStripMenuItem tsmiNotepad;
         private ToolStripMenuItem tsmiClear;
+        private ToolStripSeparator toolStripMenuItem1;
+        private ToolStripMenuItem tsmiSave;
+        private ToolStripMenuItem tsmiLoad;
     }
 }
