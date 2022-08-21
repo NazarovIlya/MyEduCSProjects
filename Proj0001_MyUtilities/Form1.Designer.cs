@@ -42,6 +42,10 @@
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.tabPageGetPassword = new System.Windows.Forms.TabPage();
+            this.btnNumericLengthReset = new System.Windows.Forms.Button();
+            this.numericPasswordLength = new System.Windows.Forms.NumericUpDown();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.btnChLBxReset = new System.Windows.Forms.Button();
             this.chlstbxSimbols = new System.Windows.Forms.CheckedListBox();
             this.tabPageNotePad = new System.Windows.Forms.TabPage();
             this.richTxtBxNotePad = new System.Windows.Forms.RichTextBox();
@@ -61,10 +65,10 @@
             this.lblMin = new System.Windows.Forms.Label();
             this.lblRandomNumber = new System.Windows.Forms.Label();
             this.btnGetRandom = new System.Windows.Forms.Button();
-            this.btnChLBxReset = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.tabPageGetPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPasswordLength)).BeginInit();
             this.tabPageNotePad.SuspendLayout();
             this.tabPageCounter.SuspendLayout();
             this.tabPageGenerator.SuspendLayout();
@@ -194,6 +198,9 @@
             // 
             // tabPageGetPassword
             // 
+            this.tabPageGetPassword.Controls.Add(this.btnNumericLengthReset);
+            this.tabPageGetPassword.Controls.Add(this.numericPasswordLength);
+            this.tabPageGetPassword.Controls.Add(this.lblPassword);
             this.tabPageGetPassword.Controls.Add(this.btnChLBxReset);
             this.tabPageGetPassword.Controls.Add(this.chlstbxSimbols);
             this.tabPageGetPassword.Location = new System.Drawing.Point(4, 34);
@@ -202,6 +209,57 @@
             this.tabPageGetPassword.TabIndex = 3;
             this.tabPageGetPassword.Text = "Генератор паролей";
             this.tabPageGetPassword.UseVisualStyleBackColor = true;
+            // 
+            // btnNumericLengthReset
+            // 
+            this.btnNumericLengthReset.Location = new System.Drawing.Point(560, 83);
+            this.btnNumericLengthReset.Name = "btnNumericLengthReset";
+            this.btnNumericLengthReset.Size = new System.Drawing.Size(112, 34);
+            this.btnNumericLengthReset.TabIndex = 4;
+            this.btnNumericLengthReset.Text = "Сброс";
+            this.btnNumericLengthReset.UseVisualStyleBackColor = true;
+            this.btnNumericLengthReset.Click += new System.EventHandler(this.btnNumericLengthReset_Click);
+            // 
+            // numericPasswordLength
+            // 
+            this.numericPasswordLength.Location = new System.Drawing.Point(749, 39);
+            this.numericPasswordLength.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numericPasswordLength.Minimum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.numericPasswordLength.Name = "numericPasswordLength";
+            this.numericPasswordLength.Size = new System.Drawing.Size(83, 31);
+            this.numericPasswordLength.TabIndex = 3;
+            this.numericPasswordLength.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(560, 41);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(136, 25);
+            this.lblPassword.TabIndex = 2;
+            this.lblPassword.Text = "Длинна пароля";
+            // 
+            // btnChLBxReset
+            // 
+            this.btnChLBxReset.Location = new System.Drawing.Point(29, 180);
+            this.btnChLBxReset.Name = "btnChLBxReset";
+            this.btnChLBxReset.Size = new System.Drawing.Size(164, 34);
+            this.btnChLBxReset.TabIndex = 1;
+            this.btnChLBxReset.Text = "Сброс";
+            this.btnChLBxReset.UseVisualStyleBackColor = true;
+            this.btnChLBxReset.Click += new System.EventHandler(this.btnChLBxReset_Click);
             // 
             // chlstbxSimbols
             // 
@@ -436,16 +494,6 @@
             this.btnGetRandom.UseVisualStyleBackColor = true;
             this.btnGetRandom.Click += new System.EventHandler(this.btnGetRandom_Click);
             // 
-            // btnChLBxReset
-            // 
-            this.btnChLBxReset.Location = new System.Drawing.Point(29, 174);
-            this.btnChLBxReset.Name = "btnChLBxReset";
-            this.btnChLBxReset.Size = new System.Drawing.Size(188, 48);
-            this.btnChLBxReset.TabIndex = 1;
-            this.btnChLBxReset.Text = "Сброс";
-            this.btnChLBxReset.UseVisualStyleBackColor = true;
-            this.btnChLBxReset.Click += new System.EventHandler(this.btnChLBxReset_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -461,6 +509,8 @@
             this.MainMenu.PerformLayout();
             this.mainTabControl.ResumeLayout(false);
             this.tabPageGetPassword.ResumeLayout(false);
+            this.tabPageGetPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPasswordLength)).EndInit();
             this.tabPageNotePad.ResumeLayout(false);
             this.tabPageCounter.ResumeLayout(false);
             this.tabPageCounter.PerformLayout();
@@ -509,5 +559,8 @@
         private TabPage tabPageGetPassword;
         private CheckedListBox chlstbxSimbols;
         private Button btnChLBxReset;
+        private Button btnNumericLengthReset;
+        private NumericUpDown numericPasswordLength;
+        private Label lblPassword;
     }
 }
