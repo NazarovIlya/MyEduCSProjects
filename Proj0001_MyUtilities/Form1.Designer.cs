@@ -41,6 +41,8 @@
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl = new System.Windows.Forms.TabControl();
+            this.tabPageGetPassword = new System.Windows.Forms.TabPage();
+            this.chlstbxSimbols = new System.Windows.Forms.CheckedListBox();
             this.tabPageNotePad = new System.Windows.Forms.TabPage();
             this.richTxtBxNotePad = new System.Windows.Forms.RichTextBox();
             this.tabPageCounter = new System.Windows.Forms.TabPage();
@@ -59,8 +61,10 @@
             this.lblMin = new System.Windows.Forms.Label();
             this.lblRandomNumber = new System.Windows.Forms.Label();
             this.btnGetRandom = new System.Windows.Forms.Button();
+            this.btnChLBxReset = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
+            this.tabPageGetPassword.SuspendLayout();
             this.tabPageNotePad.SuspendLayout();
             this.tabPageCounter.SuspendLayout();
             this.tabPageGenerator.SuspendLayout();
@@ -177,6 +181,7 @@
             // 
             // mainTabControl
             // 
+            this.mainTabControl.Controls.Add(this.tabPageGetPassword);
             this.mainTabControl.Controls.Add(this.tabPageNotePad);
             this.mainTabControl.Controls.Add(this.tabPageCounter);
             this.mainTabControl.Controls.Add(this.tabPageGenerator);
@@ -186,6 +191,32 @@
             this.mainTabControl.SelectedIndex = 0;
             this.mainTabControl.Size = new System.Drawing.Size(993, 621);
             this.mainTabControl.TabIndex = 1;
+            // 
+            // tabPageGetPassword
+            // 
+            this.tabPageGetPassword.Controls.Add(this.btnChLBxReset);
+            this.tabPageGetPassword.Controls.Add(this.chlstbxSimbols);
+            this.tabPageGetPassword.Location = new System.Drawing.Point(4, 34);
+            this.tabPageGetPassword.Name = "tabPageGetPassword";
+            this.tabPageGetPassword.Size = new System.Drawing.Size(985, 583);
+            this.tabPageGetPassword.TabIndex = 3;
+            this.tabPageGetPassword.Text = "Генератор паролей";
+            this.tabPageGetPassword.UseVisualStyleBackColor = true;
+            // 
+            // chlstbxSimbols
+            // 
+            this.chlstbxSimbols.BackColor = System.Drawing.SystemColors.Window;
+            this.chlstbxSimbols.CheckOnClick = true;
+            this.chlstbxSimbols.FormattingEnabled = true;
+            this.chlstbxSimbols.Items.AddRange(new object[] {
+            "Цифры",
+            "Прописные буквы",
+            "Строчные буквы",
+            "Спец. символы: ~`!@#$%^&*()_=+-\\|/<>[]{};:\',\"/?."});
+            this.chlstbxSimbols.Location = new System.Drawing.Point(29, 39);
+            this.chlstbxSimbols.Name = "chlstbxSimbols";
+            this.chlstbxSimbols.Size = new System.Drawing.Size(447, 116);
+            this.chlstbxSimbols.TabIndex = 0;
             // 
             // tabPageNotePad
             // 
@@ -405,6 +436,16 @@
             this.btnGetRandom.UseVisualStyleBackColor = true;
             this.btnGetRandom.Click += new System.EventHandler(this.btnGetRandom_Click);
             // 
+            // btnChLBxReset
+            // 
+            this.btnChLBxReset.Location = new System.Drawing.Point(29, 174);
+            this.btnChLBxReset.Name = "btnChLBxReset";
+            this.btnChLBxReset.Size = new System.Drawing.Size(188, 48);
+            this.btnChLBxReset.TabIndex = 1;
+            this.btnChLBxReset.Text = "Сброс";
+            this.btnChLBxReset.UseVisualStyleBackColor = true;
+            this.btnChLBxReset.Click += new System.EventHandler(this.btnChLBxReset_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -419,6 +460,7 @@
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.mainTabControl.ResumeLayout(false);
+            this.tabPageGetPassword.ResumeLayout(false);
             this.tabPageNotePad.ResumeLayout(false);
             this.tabPageCounter.ResumeLayout(false);
             this.tabPageCounter.PerformLayout();
@@ -464,5 +506,8 @@
         private ToolStripSeparator toolStripMenuItem1;
         private ToolStripMenuItem tsmiSave;
         private ToolStripMenuItem tsmiLoad;
+        private TabPage tabPageGetPassword;
+        private CheckedListBox chlstbxSimbols;
+        private Button btnChLBxReset;
     }
 }
