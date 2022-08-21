@@ -42,6 +42,10 @@
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.tabPageGetPassword = new System.Windows.Forms.TabPage();
+            this.btnChBxClear = new System.Windows.Forms.Button();
+            this.txtBxPassword = new System.Windows.Forms.TextBox();
+            this.btnCopyToBuffer = new System.Windows.Forms.Button();
+            this.btnCreatePassword = new System.Windows.Forms.Button();
             this.btnNumericLengthReset = new System.Windows.Forms.Button();
             this.numericPasswordLength = new System.Windows.Forms.NumericUpDown();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -198,6 +202,10 @@
             // 
             // tabPageGetPassword
             // 
+            this.tabPageGetPassword.Controls.Add(this.btnChBxClear);
+            this.tabPageGetPassword.Controls.Add(this.txtBxPassword);
+            this.tabPageGetPassword.Controls.Add(this.btnCopyToBuffer);
+            this.tabPageGetPassword.Controls.Add(this.btnCreatePassword);
             this.tabPageGetPassword.Controls.Add(this.btnNumericLengthReset);
             this.tabPageGetPassword.Controls.Add(this.numericPasswordLength);
             this.tabPageGetPassword.Controls.Add(this.lblPassword);
@@ -210,11 +218,49 @@
             this.tabPageGetPassword.Text = "Генератор паролей";
             this.tabPageGetPassword.UseVisualStyleBackColor = true;
             // 
+            // btnChBxClear
+            // 
+            this.btnChBxClear.Location = new System.Drawing.Point(176, 462);
+            this.btnChBxClear.Name = "btnChBxClear";
+            this.btnChBxClear.Size = new System.Drawing.Size(227, 34);
+            this.btnChBxClear.TabIndex = 8;
+            this.btnChBxClear.Text = "Сброс";
+            this.btnChBxClear.UseVisualStyleBackColor = true;
+            this.btnChBxClear.Click += new System.EventHandler(this.btnChBxClear_Click);
+            // 
+            // txtBxPassword
+            // 
+            this.txtBxPassword.BackColor = System.Drawing.SystemColors.Info;
+            this.txtBxPassword.Location = new System.Drawing.Point(29, 393);
+            this.txtBxPassword.Name = "txtBxPassword";
+            this.txtBxPassword.Size = new System.Drawing.Size(512, 31);
+            this.txtBxPassword.TabIndex = 7;
+            // 
+            // btnCopyToBuffer
+            // 
+            this.btnCopyToBuffer.Location = new System.Drawing.Point(333, 317);
+            this.btnCopyToBuffer.Name = "btnCopyToBuffer";
+            this.btnCopyToBuffer.Size = new System.Drawing.Size(208, 34);
+            this.btnCopyToBuffer.TabIndex = 6;
+            this.btnCopyToBuffer.Text = "Копировать в буффер";
+            this.btnCopyToBuffer.UseVisualStyleBackColor = true;
+            this.btnCopyToBuffer.Click += new System.EventHandler(this.btnCopyToBuffer_Click);
+            // 
+            // btnCreatePassword
+            // 
+            this.btnCreatePassword.Location = new System.Drawing.Point(29, 317);
+            this.btnCreatePassword.Name = "btnCreatePassword";
+            this.btnCreatePassword.Size = new System.Drawing.Size(208, 34);
+            this.btnCreatePassword.TabIndex = 5;
+            this.btnCreatePassword.Text = "Создать пароль";
+            this.btnCreatePassword.UseVisualStyleBackColor = true;
+            this.btnCreatePassword.Click += new System.EventHandler(this.btnCreatePassword_Click);
+            // 
             // btnNumericLengthReset
             // 
-            this.btnNumericLengthReset.Location = new System.Drawing.Point(560, 83);
+            this.btnNumericLengthReset.Location = new System.Drawing.Point(674, 240);
             this.btnNumericLengthReset.Name = "btnNumericLengthReset";
-            this.btnNumericLengthReset.Size = new System.Drawing.Size(112, 34);
+            this.btnNumericLengthReset.Size = new System.Drawing.Size(208, 34);
             this.btnNumericLengthReset.TabIndex = 4;
             this.btnNumericLengthReset.Text = "Сброс";
             this.btnNumericLengthReset.UseVisualStyleBackColor = true;
@@ -222,7 +268,7 @@
             // 
             // numericPasswordLength
             // 
-            this.numericPasswordLength.Location = new System.Drawing.Point(749, 39);
+            this.numericPasswordLength.Location = new System.Drawing.Point(333, 243);
             this.numericPasswordLength.Maximum = new decimal(new int[] {
             30,
             0,
@@ -234,28 +280,29 @@
             0,
             0});
             this.numericPasswordLength.Name = "numericPasswordLength";
-            this.numericPasswordLength.Size = new System.Drawing.Size(83, 31);
+            this.numericPasswordLength.Size = new System.Drawing.Size(208, 31);
             this.numericPasswordLength.TabIndex = 3;
             this.numericPasswordLength.Value = new decimal(new int[] {
             4,
             0,
             0,
             0});
+            this.numericPasswordLength.ValueChanged += new System.EventHandler(this.numericPasswordLength_ValueChanged);
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(560, 41);
+            this.lblPassword.Location = new System.Drawing.Point(68, 245);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(136, 25);
+            this.lblPassword.Size = new System.Drawing.Size(140, 25);
             this.lblPassword.TabIndex = 2;
-            this.lblPassword.Text = "Длинна пароля";
+            this.lblPassword.Text = "Длинна пароля:\r\n";
             // 
             // btnChLBxReset
             // 
             this.btnChLBxReset.Location = new System.Drawing.Point(29, 180);
             this.btnChLBxReset.Name = "btnChLBxReset";
-            this.btnChLBxReset.Size = new System.Drawing.Size(164, 34);
+            this.btnChLBxReset.Size = new System.Drawing.Size(208, 34);
             this.btnChLBxReset.TabIndex = 1;
             this.btnChLBxReset.Text = "Сброс";
             this.btnChLBxReset.UseVisualStyleBackColor = true;
@@ -270,10 +317,11 @@
             "Цифры",
             "Прописные буквы",
             "Строчные буквы",
-            "Спец. символы: ~`!@#$%^&*()_=+-\\|/<>[]{};:\',\"/?."});
+            "Спец. символы: ~, `, !, @, #, $, %, ^, &, *, (, ), _, =, +, -, <, >, [, ], {, }, " +
+                ";, :, ,, \", /, ?."});
             this.chlstbxSimbols.Location = new System.Drawing.Point(29, 39);
             this.chlstbxSimbols.Name = "chlstbxSimbols";
-            this.chlstbxSimbols.Size = new System.Drawing.Size(447, 116);
+            this.chlstbxSimbols.Size = new System.Drawing.Size(663, 116);
             this.chlstbxSimbols.TabIndex = 0;
             // 
             // tabPageNotePad
@@ -562,5 +610,9 @@
         private Button btnNumericLengthReset;
         private NumericUpDown numericPasswordLength;
         private Label lblPassword;
+        private TextBox txtBxPassword;
+        private Button btnCopyToBuffer;
+        private Button btnCreatePassword;
+        private Button btnChBxClear;
     }
 }
