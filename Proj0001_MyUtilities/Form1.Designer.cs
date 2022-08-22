@@ -41,6 +41,7 @@
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl = new System.Windows.Forms.TabControl();
+            this.tabPageConverter = new System.Windows.Forms.TabPage();
             this.tabPageGetPassword = new System.Windows.Forms.TabPage();
             this.btnChBxClear = new System.Windows.Forms.Button();
             this.txtBxPassword = new System.Windows.Forms.TextBox();
@@ -189,6 +190,7 @@
             // 
             // mainTabControl
             // 
+            this.mainTabControl.Controls.Add(this.tabPageConverter);
             this.mainTabControl.Controls.Add(this.tabPageGetPassword);
             this.mainTabControl.Controls.Add(this.tabPageNotePad);
             this.mainTabControl.Controls.Add(this.tabPageCounter);
@@ -199,6 +201,15 @@
             this.mainTabControl.SelectedIndex = 0;
             this.mainTabControl.Size = new System.Drawing.Size(993, 621);
             this.mainTabControl.TabIndex = 1;
+            // 
+            // tabPageConverter
+            // 
+            this.tabPageConverter.Location = new System.Drawing.Point(4, 34);
+            this.tabPageConverter.Name = "tabPageConverter";
+            this.tabPageConverter.Size = new System.Drawing.Size(985, 583);
+            this.tabPageConverter.TabIndex = 4;
+            this.tabPageConverter.Text = "Конверетер";
+            this.tabPageConverter.UseVisualStyleBackColor = true;
             // 
             // tabPageGetPassword
             // 
@@ -614,5 +625,6 @@
         private Button btnCopyToBuffer;
         private Button btnCreatePassword;
         private Button btnChBxClear;
+        private TabPage tabPageConverter;
     }
 }
