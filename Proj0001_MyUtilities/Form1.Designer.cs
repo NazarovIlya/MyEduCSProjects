@@ -42,6 +42,11 @@
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.tabPageConverter = new System.Windows.Forms.TabPage();
+            this.txBxTo = new System.Windows.Forms.TextBox();
+            this.txBxFrom = new System.Windows.Forms.TextBox();
+            this.btnConvert = new System.Windows.Forms.Button();
+            this.cmBxTo = new System.Windows.Forms.ComboBox();
+            this.cmBxFrom = new System.Windows.Forms.ComboBox();
             this.tabPageGetPassword = new System.Windows.Forms.TabPage();
             this.btnChBxClear = new System.Windows.Forms.Button();
             this.txtBxPassword = new System.Windows.Forms.TextBox();
@@ -72,6 +77,7 @@
             this.btnGetRandom = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.mainTabControl.SuspendLayout();
+            this.tabPageConverter.SuspendLayout();
             this.tabPageGetPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericPasswordLength)).BeginInit();
             this.tabPageNotePad.SuspendLayout();
@@ -204,12 +210,74 @@
             // 
             // tabPageConverter
             // 
+            this.tabPageConverter.Controls.Add(this.txBxTo);
+            this.tabPageConverter.Controls.Add(this.txBxFrom);
+            this.tabPageConverter.Controls.Add(this.btnConvert);
+            this.tabPageConverter.Controls.Add(this.cmBxTo);
+            this.tabPageConverter.Controls.Add(this.cmBxFrom);
             this.tabPageConverter.Location = new System.Drawing.Point(4, 34);
             this.tabPageConverter.Name = "tabPageConverter";
             this.tabPageConverter.Size = new System.Drawing.Size(985, 583);
             this.tabPageConverter.TabIndex = 4;
             this.tabPageConverter.Text = "Конверетер";
             this.tabPageConverter.UseVisualStyleBackColor = true;
+            // 
+            // txBxTo
+            // 
+            this.txBxTo.Location = new System.Drawing.Point(699, 192);
+            this.txBxTo.Name = "txBxTo";
+            this.txBxTo.ReadOnly = true;
+            this.txBxTo.Size = new System.Drawing.Size(169, 31);
+            this.txBxTo.TabIndex = 4;
+            this.txBxTo.Text = "0";
+            // 
+            // txBxFrom
+            // 
+            this.txBxFrom.Location = new System.Drawing.Point(126, 192);
+            this.txBxFrom.Name = "txBxFrom";
+            this.txBxFrom.Size = new System.Drawing.Size(150, 31);
+            this.txBxFrom.TabIndex = 3;
+            this.txBxFrom.Text = "0";
+            // 
+            // btnConvert
+            // 
+            this.btnConvert.Location = new System.Drawing.Point(395, 91);
+            this.btnConvert.Name = "btnConvert";
+            this.btnConvert.Size = new System.Drawing.Size(174, 39);
+            this.btnConvert.TabIndex = 2;
+            this.btnConvert.Text = "Конвертировать";
+            this.btnConvert.UseVisualStyleBackColor = true;
+            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
+            // 
+            // cmBxTo
+            // 
+            this.cmBxTo.FormattingEnabled = true;
+            this.cmBxTo.Items.AddRange(new object[] {
+            "mm",
+            "cm",
+            "dm",
+            "km",
+            "mile"});
+            this.cmBxTo.Location = new System.Drawing.Point(699, 91);
+            this.cmBxTo.Name = "cmBxTo";
+            this.cmBxTo.Size = new System.Drawing.Size(169, 33);
+            this.cmBxTo.TabIndex = 1;
+            this.cmBxTo.Text = "mm";
+            // 
+            // cmBxFrom
+            // 
+            this.cmBxFrom.FormattingEnabled = true;
+            this.cmBxFrom.Items.AddRange(new object[] {
+            "mm",
+            "cm",
+            "dm",
+            "km",
+            "mile"});
+            this.cmBxFrom.Location = new System.Drawing.Point(126, 91);
+            this.cmBxFrom.Name = "cmBxFrom";
+            this.cmBxFrom.Size = new System.Drawing.Size(150, 33);
+            this.cmBxFrom.TabIndex = 0;
+            this.cmBxFrom.Text = "mm";
             // 
             // tabPageGetPassword
             // 
@@ -567,6 +635,8 @@
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.mainTabControl.ResumeLayout(false);
+            this.tabPageConverter.ResumeLayout(false);
+            this.tabPageConverter.PerformLayout();
             this.tabPageGetPassword.ResumeLayout(false);
             this.tabPageGetPassword.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericPasswordLength)).EndInit();
@@ -626,5 +696,10 @@
         private Button btnCreatePassword;
         private Button btnChBxClear;
         private TabPage tabPageConverter;
+        private TextBox txBxTo;
+        private TextBox txBxFrom;
+        private Button btnConvert;
+        private ComboBox cmBxTo;
+        private ComboBox cmBxFrom;
     }
 }
