@@ -20,9 +20,10 @@ namespace DataTypes
             Console.WriteLine(string.Format(message, "sbyte", typeof(sbyte), sizeof(sbyte), sbyte.MinValue, sbyte.MaxValue));
             Console.WriteLine(string.Format(message, "short", typeof(short), sizeof(short), short.MinValue, short.MaxValue));
             Console.WriteLine(string.Format(message, "ushort", typeof(ushort), sizeof(ushort), ushort.MinValue, ushort.MaxValue));
-            Console.WriteLine(string.Format(message, "byte", typeof(byte), sizeof(byte), byte.MinValue, byte.MaxValue));
-            Console.WriteLine(string.Format(message, "byte", typeof(byte), sizeof(byte), byte.MinValue, byte.MaxValue));
-            Console.WriteLine(string.Format(message, "byte", typeof(byte), sizeof(byte), byte.MinValue, byte.MaxValue));
+            Console.WriteLine(string.Format(message, "int", typeof(int), sizeof(int), int.MinValue, int.MaxValue));
+            Console.WriteLine(string.Format(message, "uint", typeof(uint), sizeof(uint), uint.MinValue, uint.MaxValue));
+            Console.WriteLine(string.Format(message, "long", typeof(long), sizeof(long), long.MinValue, long.MaxValue));
+            Console.WriteLine(string.Format(message, "ulong", typeof(ulong), sizeof(ulong), ulong.MinValue, ulong.MaxValue));
 
             Console.WriteLine("\n\t\t\t\t\t Числовые (целочисленные) типы:");
 
