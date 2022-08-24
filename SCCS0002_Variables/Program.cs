@@ -24,10 +24,13 @@ namespace SCCS0002_Variables
             /// floating point variable
             
             float floatVar;
-            floatVar = 3.4f; // suffix F is necessery !!!
+            floatVar = 3.4f; // suffix F is necessery
 
             // better
-            float floatVarSecond = 3.4f; // suffix F is necessery !!!
+            float floatVarSecond = 3.4f; // suffix F is necessery
+
+            // however, it is possible through casting to the type
+            float floatVarThird = (float)3.4f; // the suffix is not needed
 
             double doubleVar;
             doubleVar = 0.00000001;
@@ -35,11 +38,14 @@ namespace SCCS0002_Variables
             double doubleVarBetter = 0.00000001;
 
             decimal decimalVar;
-            decimalVar = 45.00000000000056m; // suffix M is necessery !!!
+            decimalVar = 45.00000000000056m; // suffix M is necessery
 
             // better
             
-            decimal decimalVarSecond = 45.00000000000056m; // suffix M is necessery !!!
+            decimal decimalVarSecond = 45.00000000000056m; // suffix M is necessery
+
+            // however, it is possible through casting to the type
+            decimal decimalVarSecond = (decimal)45.00000000000056; // the suffix is not needed 
 
 
             Console.ReadKey();
