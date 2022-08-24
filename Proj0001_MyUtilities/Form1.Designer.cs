@@ -42,6 +42,8 @@
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.tabPageConverter = new System.Windows.Forms.TabPage();
+            this.cmBxMetrics = new System.Windows.Forms.ComboBox();
+            this.btnSwap = new System.Windows.Forms.Button();
             this.txBxTo = new System.Windows.Forms.TextBox();
             this.txBxFrom = new System.Windows.Forms.TextBox();
             this.btnConvert = new System.Windows.Forms.Button();
@@ -210,6 +212,8 @@
             // 
             // tabPageConverter
             // 
+            this.tabPageConverter.Controls.Add(this.cmBxMetrics);
+            this.tabPageConverter.Controls.Add(this.btnSwap);
             this.tabPageConverter.Controls.Add(this.txBxTo);
             this.tabPageConverter.Controls.Add(this.txBxFrom);
             this.tabPageConverter.Controls.Add(this.btnConvert);
@@ -222,9 +226,32 @@
             this.tabPageConverter.Text = "Конверетер";
             this.tabPageConverter.UseVisualStyleBackColor = true;
             // 
+            // cmBxMetrics
+            // 
+            this.cmBxMetrics.FormattingEnabled = true;
+            this.cmBxMetrics.Items.AddRange(new object[] {
+            "длина",
+            "вес"});
+            this.cmBxMetrics.Location = new System.Drawing.Point(398, 129);
+            this.cmBxMetrics.Name = "cmBxMetrics";
+            this.cmBxMetrics.Size = new System.Drawing.Size(174, 33);
+            this.cmBxMetrics.TabIndex = 6;
+            this.cmBxMetrics.Text = "длинна";
+            this.cmBxMetrics.SelectedIndexChanged += new System.EventHandler(this.cmBxSwap_SelectedIndexChanged);
+            // 
+            // btnSwap
+            // 
+            this.btnSwap.Location = new System.Drawing.Point(398, 210);
+            this.btnSwap.Name = "btnSwap";
+            this.btnSwap.Size = new System.Drawing.Size(174, 34);
+            this.btnSwap.TabIndex = 5;
+            this.btnSwap.Text = "<-->";
+            this.btnSwap.UseVisualStyleBackColor = true;
+            this.btnSwap.Click += new System.EventHandler(this.btnSwap_Click);
+            // 
             // txBxTo
             // 
-            this.txBxTo.Location = new System.Drawing.Point(699, 192);
+            this.txBxTo.Location = new System.Drawing.Point(693, 312);
             this.txBxTo.Name = "txBxTo";
             this.txBxTo.ReadOnly = true;
             this.txBxTo.Size = new System.Drawing.Size(169, 31);
@@ -233,7 +260,7 @@
             // 
             // txBxFrom
             // 
-            this.txBxFrom.Location = new System.Drawing.Point(126, 192);
+            this.txBxFrom.Location = new System.Drawing.Point(120, 312);
             this.txBxFrom.Name = "txBxFrom";
             this.txBxFrom.Size = new System.Drawing.Size(150, 31);
             this.txBxFrom.TabIndex = 3;
@@ -241,7 +268,7 @@
             // 
             // btnConvert
             // 
-            this.btnConvert.Location = new System.Drawing.Point(395, 91);
+            this.btnConvert.Location = new System.Drawing.Point(398, 312);
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.Size = new System.Drawing.Size(174, 39);
             this.btnConvert.TabIndex = 2;
@@ -258,7 +285,7 @@
             "dm",
             "km",
             "mile"});
-            this.cmBxTo.Location = new System.Drawing.Point(699, 91);
+            this.cmBxTo.Location = new System.Drawing.Point(693, 211);
             this.cmBxTo.Name = "cmBxTo";
             this.cmBxTo.Size = new System.Drawing.Size(169, 33);
             this.cmBxTo.TabIndex = 1;
@@ -273,7 +300,7 @@
             "dm",
             "km",
             "mile"});
-            this.cmBxFrom.Location = new System.Drawing.Point(126, 91);
+            this.cmBxFrom.Location = new System.Drawing.Point(120, 211);
             this.cmBxFrom.Name = "cmBxFrom";
             this.cmBxFrom.Size = new System.Drawing.Size(150, 33);
             this.cmBxFrom.TabIndex = 0;
@@ -701,5 +728,7 @@
         private Button btnConvert;
         private ComboBox cmBxTo;
         private ComboBox cmBxFrom;
+        private Button btnSwap;
+        private ComboBox cmBxMetrics;
     }
 }
