@@ -47,6 +47,27 @@ namespace SCCS0002_Variables
             // however, it is possible through casting to the type
             decimal decimalVarSecond = (decimal)45.00000000000056; // the suffix is not needed 
 
+            /// logical
+            bool boolVar;
+            boolVar = true;
+
+            // better
+            bool boolVarSecond = true;
+
+            /// char & string
+            
+            char charVar;
+            charVar = 'q';
+
+            // better
+            char charVarSecond = 'q';
+
+            string stringVar;
+            stringVar = "";
+
+            // better
+            string stringVarSecond = string.Empty;
+
 
             Console.ReadKey();
         }
