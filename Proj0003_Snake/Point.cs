@@ -26,13 +26,21 @@ namespace Proj0003_Snake
         }
         public void Move(int offset, Direction direction)
         {
-            if (direction == Direction.LEFT)
-                X -= offset;
-            else if (direction == Direction.RIGTH)
-                X += offset;
-            else if (direction == Direction.UP)
-                Y += offset;
-            else Y -= offset;
+            switch (direction)
+            {
+                case Direction.LEFT:
+                    this.X -= offset;
+                    break;
+                case Direction.RIGTH:
+                    this.X += offset;
+                    break;
+                case Direction.UP:
+                    this.Y += offset;
+                    break;
+                default:
+                    this.Y -= offset;
+                    break;
+            }
         }
         public void DrawPoint()
         {
