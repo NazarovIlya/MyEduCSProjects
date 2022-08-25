@@ -236,7 +236,7 @@
             this.cmBxMetrics.Name = "cmBxMetrics";
             this.cmBxMetrics.Size = new System.Drawing.Size(174, 33);
             this.cmBxMetrics.TabIndex = 6;
-            this.cmBxMetrics.Text = "длинна";
+            this.cmBxMetrics.Text = "длина";
             this.cmBxMetrics.SelectedIndexChanged += new System.EventHandler(this.cmBxSwap_SelectedIndexChanged);
             // 
             // btnSwap
