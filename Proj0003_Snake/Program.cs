@@ -12,10 +12,7 @@ namespace Proj0003_Snake
         {
             Console.WriteLine("\t\t\t\t\t\tHello snake!");
 
-            Point p1 = new Point(1, 3);
-            p1.DrawPoint();
-            var p2 = new Point(8, 3, '$');
-            p2.DrawPoint();
+            //
 
             HorizontalLine lineUp = new HorizontalLine(15, 95, 5, '#');
             lineUp.DrawLine();
@@ -25,6 +22,14 @@ namespace Proj0003_Snake
             lineLeft.DrawLine();
             VerticalLine lineRight = new VerticalLine(5, 30, 95, '#');
             lineRight.DrawLine();
+
+            //
+
+
+            var p1 = new Point(20, 10);
+            p1.DrawPoint();
+            var p2 = new Point(30, 10, '$');
+            p2.DrawPoint();
 
             Console.ReadLine();
         }
