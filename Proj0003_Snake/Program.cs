@@ -17,8 +17,14 @@ namespace Proj0003_Snake
             var p2 = new Point(8, 3, '$');
             p2.DrawPoint();
 
-            HorizontalLine line = new HorizontalLine(5, 15, 10, '-');
-            line.DrawLine();
+            HorizontalLine lineUp = new HorizontalLine(15, 95, 5, '#');
+            lineUp.DrawLine();
+            HorizontalLine lineDown = new HorizontalLine(15, 95, 30, '#');
+            lineDown.DrawLine();
+            VerticalLine lineLeft = new VerticalLine(5, 30, 15, '#');
+            lineLeft.DrawLine();
+            VerticalLine lineRight = new VerticalLine(5, 30, 95, '#');
+            lineRight.DrawLine();
 
             Console.ReadLine();
         }
