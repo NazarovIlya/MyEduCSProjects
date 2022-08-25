@@ -8,5 +8,6 @@ namespace Proj0003_Snake
 {
     internal class Point
     {
+
     }
 }
