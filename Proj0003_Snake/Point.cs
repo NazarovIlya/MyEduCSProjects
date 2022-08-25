@@ -10,12 +10,12 @@ namespace Proj0003_Snake
     {
         public int x;
         public int y;
-        public char symbolAnyChar;
+        public char simbol;
 
         public void DrawPoint()
         {
             Console.SetCursorPosition(x, y);
-            Console.Write(symbolAnyChar);
+            Console.Write(simbol);
         }
     }
 }

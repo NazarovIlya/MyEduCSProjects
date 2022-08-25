@@ -13,17 +13,15 @@ namespace Proj0003_Snake
             Console.WriteLine("\t\t\t\t\t\tHello snake!");
 
             Point p1 = new Point();
-
             p1.x = 1;
             p1.y = 3;
-            p1.symbolAnyChar = '*';
+            p1.simbol = '*';
             p1.DrawPoint();
 
             Point p2 = new Point();
-
             p2.x = 8;
             p2.y = 4;
-            p2.symbolAnyChar = '%';
+            p2.simbol = '%';
             p2.DrawPoint();
             Console.ReadLine();
         }
