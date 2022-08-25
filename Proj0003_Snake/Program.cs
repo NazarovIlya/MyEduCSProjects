@@ -12,17 +12,15 @@ namespace Proj0003_Snake
         {
             Console.WriteLine("\t\t\t\t\t\tHello snake!");
 
-            Point p1 = new Point();
-            p1.x = 1;
-            p1.y = 3;
-            p1.simbol = '*';
+            Point p1 = new Point(1, 3);
             p1.DrawPoint();
-
-            Point p2 = new Point();
-            p2.x = 8;
-            p2.y = 4;
-            p2.simbol = '%';
+            var p2 = new Point(8, 3, '$');
             p2.DrawPoint();
+
+            List<Point> points = new List<Point>();
+            points.Add(p1);
+            points.Add(p2);
+
             Console.ReadLine();
         }
     }

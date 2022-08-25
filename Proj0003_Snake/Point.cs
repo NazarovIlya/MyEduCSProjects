@@ -8,14 +8,20 @@ namespace Proj0003_Snake
 {
     internal class Point
     {
-        public int x;
-        public int y;
-        public char simbol;
+        public int X { get; set; }
+        public int Y { get; set; }
+        public char SymbolAnyChar { get; set; }
 
+        public Point(int x, int y, char symbol = '*')
+        {
+            X = x;
+            Y = y;
+            SymbolAnyChar = symbol;
+        }   
         public void DrawPoint()
         {
-            Console.SetCursorPosition(x, y);
-            Console.Write(simbol);
+            Console.SetCursorPosition(X, Y);
+            Console.Write(SymbolAnyChar);
         }
     }
 }
