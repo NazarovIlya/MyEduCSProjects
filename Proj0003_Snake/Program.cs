@@ -17,9 +17,8 @@ namespace Proj0003_Snake
             var p2 = new Point(8, 3, '$');
             p2.DrawPoint();
 
-            List<Point> points = new List<Point>();
-            points.Add(p1);
-            points.Add(p2);
+            HorizontalLine line = new HorizontalLine(5, 15, 10, '-');
+            line.DrawLine();
 
             Console.ReadLine();
         }
