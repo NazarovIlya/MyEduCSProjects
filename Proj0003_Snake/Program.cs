@@ -10,6 +10,7 @@ namespace Proj0003_Snake
     {
         static void Main(string[] args)
         {
+            Console.SetBufferSize(120, 35);
             Console.WriteLine("\t\t\t\t\t\tHello snake!");
 
             Point p1 = new Point(1, 3);
