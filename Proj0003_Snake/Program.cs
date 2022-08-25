@@ -25,10 +25,9 @@ namespace Proj0003_Snake
 
             //
 
-            var p1 = new Point(20, 10);
-            p1.DrawPoint();
-            var p2 = new Point(30, 10, '$');
-            p2.DrawPoint();
+            Point p = new Point(20, 10);
+            Snake snake = new Snake(p, 4, Direction.RIGTH);
+            snake.DrawLine();
 
             Console.ReadLine();
         }

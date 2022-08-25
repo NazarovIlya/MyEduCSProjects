@@ -18,10 +18,30 @@ namespace Proj0003_Snake
             Y = y;
             SymbolAnyChar = symbol;
         }   
+        public Point(Point p)
+        {
+            X = p.X;
+            Y = p.Y;
+            SymbolAnyChar = p.SymbolAnyChar;
+        }
+        public void Move(int offset, Direction direction)
+        {
+            if (direction == Direction.LEFT)
+                X -= offset;
+            else if (direction == Direction.RIGTH)
+                X += offset;
+            else if (direction == Direction.UP)
+                Y += offset;
+            else Y -= offset;
+        }
         public void DrawPoint()
         {
             Console.SetCursorPosition(X, Y);
             Console.Write(SymbolAnyChar);
+        }
+        public override string ToString()
+        {
+            return X + ", " + Y + ", " +SymbolAnyChar;
         }
     }
 }
