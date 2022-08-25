@@ -25,7 +25,6 @@ namespace Proj0003_Snake
 
             //
 
-
             var p1 = new Point(20, 10);
             p1.DrawPoint();
             var p2 = new Point(30, 10, '$');
