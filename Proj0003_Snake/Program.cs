@@ -8,21 +8,23 @@ namespace Proj0003_Snake
 {
     internal class Program
     {
-        static void DrawPoint(int x, int y, char symbolAnyChar)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(symbolAnyChar);
-        }
         static void Main(string[] args)
         {
             Console.WriteLine("\t\t\t\t\t\tHello snake!");
 
-            int xa = 1;
-            int ya = 3;
-            char symbolFirst = '*';
+            Point p1 = new Point();
 
-            DrawPoint(xa, ya, symbolFirst);
+            p1.x = 1;
+            p1.y = 3;
+            p1.symbolAnyChar = '*';
+            p1.DrawPoint();
 
+            Point p2 = new Point();
+
+            p2.x = 8;
+            p2.y = 4;
+            p2.symbolAnyChar = '%';
+            p2.DrawPoint();
             Console.ReadLine();
         }
     }
