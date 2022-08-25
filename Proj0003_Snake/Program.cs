@@ -11,14 +11,16 @@ namespace Proj0003_Snake
         static void Main(string[] args)
         {
             Console.WriteLine("\t\t\t\t\t\tHello snake!");
+            Console.SetWindowSize(96, 35);
+            Console.SetBufferSize(96, 35);
 
             //
 
-            HorizontalLine lineUp = new HorizontalLine(15, 95, 5, '#');
+            HorizontalLine lineUp = new HorizontalLine(5, 95, 5, '#');
             lineUp.DrawLine();
-            HorizontalLine lineDown = new HorizontalLine(15, 95, 30, '#');
+            HorizontalLine lineDown = new HorizontalLine(5, 95, 30, '#');
             lineDown.DrawLine();
-            VerticalLine lineLeft = new VerticalLine(5, 30, 15, '#');
+            VerticalLine lineLeft = new VerticalLine(5, 30, 5, '#');
             lineLeft.DrawLine();
             VerticalLine lineRight = new VerticalLine(5, 30, 95, '#');
             lineRight.DrawLine();
