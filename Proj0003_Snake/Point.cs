@@ -47,6 +47,11 @@ namespace Proj0003_Snake
             Console.SetCursorPosition(X, Y);
             Console.Write(SymbolAnyChar);
         }
+        public void Clear()
+        {
+            this.SymbolAnyChar = ' ';
+            DrawPoint();
+        }
         public override string ToString()
         {
             return X + ", " + Y + ", " +SymbolAnyChar;

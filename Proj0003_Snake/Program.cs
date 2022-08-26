@@ -30,6 +30,7 @@ namespace Proj0003_Snake
             Point p = new Point(20, 10);
             Snake snake = new Snake(p, 4, Direction.RIGTH);
             snake.DrawLine();
+            snake.Move();
 
             Console.ReadLine();
         }
