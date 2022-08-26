@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Proj0003_Snake
@@ -30,7 +31,31 @@ namespace Proj0003_Snake
             Point p = new Point(20, 10);
             Snake snake = new Snake(p, 4, Direction.RIGTH);
             snake.DrawLine();
-            snake.Move();
+            
+            while(true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    switch (key.Key)
+                    {
+                        case ConsoleKey.LeftArrow:
+                            snake.Direction = Direction.LEFT;
+                            break;
+                        case ConsoleKey.RightArrow:
+                            snake.Direction = Direction.RIGTH;
+                            break;
+                        case ConsoleKey.UpArrow:
+                            snake.Direction = Direction.UP;
+                            break;
+                        default:
+                            snake.Direction = Direction.DOWN;
+                            break;
+                    }
+                }
+                Thread.Sleep(300);
+                snake.Move();
+            }
 
             Console.ReadLine();
         }

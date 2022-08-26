@@ -8,15 +8,15 @@ namespace Proj0003_Snake
 {
     internal class Snake : Figure
     {
-        Direction direction;
+        public Direction Direction { get; set; }
         public Snake(Point tail, int length, Direction _direction)
         {
-            direction = _direction;
+            Direction = _direction;
             points = new List<Point>();
             for(int i = 0; i < length; i++)
             {
                 Point p = new Point(tail);
-                p.Move(i, direction);
+                p.Move(i, Direction);
                 points.Add(p);
             }
         }
@@ -35,7 +35,7 @@ namespace Proj0003_Snake
         {
             Point head = points.Last();
             Point nextPont = new Point(head);
-            nextPont.Move(1, direction);
+            nextPont.Move(1, Direction);
             return nextPont;
         }
     }

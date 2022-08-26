@@ -35,10 +35,10 @@ namespace Proj0003_Snake
                     this.X += offset;
                     break;
                 case Direction.UP:
-                    this.Y += offset;
+                    this.Y -= offset;
                     break;
                 default:
-                    this.Y -= offset;
+                    this.Y += offset;
                     break;
             }
         }
