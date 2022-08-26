@@ -11,39 +11,53 @@ namespace Proj0003_Snake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\t\t\t\t\t\tHello snake!");
             Console.SetWindowSize(96, 35);
             Console.SetBufferSize(96, 35);
+            Console.WriteLine("\t\t\t\t\t\tHello snake!");
 
             //
 
-            HorizontalLine lineUp = new HorizontalLine(5, 95, 5, '#');
+            HorizontalLine lineUp = new HorizontalLine(1, 95, 1, '#');
             lineUp.DrawLine();
-            HorizontalLine lineDown = new HorizontalLine(5, 95, 30, '#');
+            HorizontalLine lineDown = new HorizontalLine(1, 95, 33, '#');
             lineDown.DrawLine();
-            VerticalLine lineLeft = new VerticalLine(5, 30, 5, '#');
+            VerticalLine lineLeft = new VerticalLine(1, 33, 1, '#');
             lineLeft.DrawLine();
-            VerticalLine lineRight = new VerticalLine(5, 30, 95, '#');
+            VerticalLine lineRight = new VerticalLine(1, 33, 95, '#');
             lineRight.DrawLine();
 
             //
 
             Point p = new Point(20, 10);
-            Snake snake = new Snake(p, 4, Direction.RIGTH);
+            Snake snake = new Snake(p, 3, Direction.RIGTH);
             snake.DrawLine();
+
+            FoodCreator foodCreator = new FoodCreator(95, 34, '@');
+            Point food = foodCreator.CreateFood();
+            food.DrawPoint();
             
             while(true)
             {
+                if(snake.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.DrawPoint();
+                }
+                else
+                {
+                    snake.Move();
+                }
+                Thread.Sleep(50);
+
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
-                    snake.SnakeControl(key.Key);
+                    snake.Control(key.Key);
                     snake.IsExit(key.Key);
                 }
                 Thread.Sleep(300);
                 snake.Move();
             }
-            Console.ReadLine();
         }
     }
 }

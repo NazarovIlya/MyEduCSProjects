@@ -52,9 +52,13 @@ namespace Proj0003_Snake
             this.SymbolAnyChar = ' ';
             DrawPoint();
         }
+        public bool IsHit(Point p)
+        {
+            return p.X == this.X && p.Y == this.Y;
+        }
         public override string ToString()
         {
-            return X + ", " + Y + ", " +SymbolAnyChar;
+            return X + ", " + Y + ", " + SymbolAnyChar;
         }
     }
 }

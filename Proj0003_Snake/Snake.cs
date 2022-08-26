@@ -9,15 +9,15 @@ namespace Proj0003_Snake
 {
     internal class Snake : Figure
     {
-        public Direction Direction { get; set; }
+        Direction direction;
         public Snake(Point tail, int length, Direction _direction)
         {
-            Direction = _direction;
+            direction = _direction;
             points = new List<Point>();
             for(int i = 0; i < length; i++)
             {
                 Point p = new Point(tail);
-                p.Move(i, Direction);
+                p.Move(i, direction);
                 points.Add(p);
             }
         }
@@ -36,25 +36,25 @@ namespace Proj0003_Snake
         {
             Point head = points.Last();
             Point nextPont = new Point(head);
-            nextPont.Move(1, Direction);
+            nextPont.Move(1, direction);
             return nextPont;
         }
 
-        public void SnakeControl(ConsoleKey key)
+        public void Control(ConsoleKey key)
             {
                 switch (key)
                 {
                     case ConsoleKey.LeftArrow:
-                        Direction = Direction.LEFT;
+                        direction = Direction.LEFT;
                         break;
                     case ConsoleKey.RightArrow:
-                        Direction = Direction.RIGTH;
+                        direction = Direction.RIGTH;
                         break;
                     case ConsoleKey.UpArrow:
-                        Direction = Direction.UP;
+                        direction = Direction.UP;
                         break;
                     default:
-                        Direction = Direction.DOWN;
+                        direction = Direction.DOWN;
                         break;
                 }
             }
@@ -62,6 +62,18 @@ namespace Proj0003_Snake
         {
             if (key == ConsoleKey.Escape)
                 Environment.Exit(0);
+        }
+        internal bool Eat(Point food)
+        {
+            Point head = GetNextPoint();
+            if(head.IsHit(food))
+            {
+                food.SymbolAnyChar = head.SymbolAnyChar;
+                points.Add(food);
+                return true;
+            }
+            else
+                return false;
         }
     }
 }
