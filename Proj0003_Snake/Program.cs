@@ -37,26 +37,12 @@ namespace Proj0003_Snake
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
-                    switch (key.Key)
-                    {
-                        case ConsoleKey.LeftArrow:
-                            snake.Direction = Direction.LEFT;
-                            break;
-                        case ConsoleKey.RightArrow:
-                            snake.Direction = Direction.RIGTH;
-                            break;
-                        case ConsoleKey.UpArrow:
-                            snake.Direction = Direction.UP;
-                            break;
-                        default:
-                            snake.Direction = Direction.DOWN;
-                            break;
-                    }
+                    snake.SnakeControl(key.Key);
+                    snake.IsExit(key.Key);
                 }
                 Thread.Sleep(300);
                 snake.Move();
             }
-
             Console.ReadLine();
         }
     }
