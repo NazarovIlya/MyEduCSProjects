@@ -68,6 +68,7 @@ namespace Proj0003_Snake
             Point head = GetNextPoint();
             if(head.IsHit(food))
             {
+                food.Clear();
                 food.SymbolAnyChar = head.SymbolAnyChar;
                 points.Add(food);
                 return true;
