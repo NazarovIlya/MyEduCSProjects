@@ -55,8 +55,7 @@ namespace Proj0003_Snake
                     snake.Control(key.Key);
                     snake.IsExit(key.Key);
                 }
-                Thread.Sleep(300);
-                snake.Move();
+                Thread.Sleep(250);
             }
         }
     }
