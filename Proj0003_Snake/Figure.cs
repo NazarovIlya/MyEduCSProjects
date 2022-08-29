@@ -36,6 +36,8 @@ namespace Proj0003_Snake
         }
         public void Exit()
         {
+            Console.WriteLine("Game over!!!");
+            Console.ReadLine();
             Environment.Exit(0);
         }
     }
