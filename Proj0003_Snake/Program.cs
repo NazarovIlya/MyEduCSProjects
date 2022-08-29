@@ -34,7 +34,7 @@ namespace Proj0003_Snake
             {
                 if (walls.IsHit(snake) || snake.IsHitTail())
                 {
-                    break;
+                    walls.Exit();
                 }
                 if (snake.Eat(food))
                 {
@@ -51,7 +51,8 @@ namespace Proj0003_Snake
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.Control(key.Key);
-                    snake.IsExit(key.Key);
+                    if (key.Key == ConsoleKey.Escape)
+                        snake.Exit();
                 }
             }
         }

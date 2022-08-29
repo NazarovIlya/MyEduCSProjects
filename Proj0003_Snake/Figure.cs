@@ -25,14 +25,18 @@ namespace Proj0003_Snake
             }
             return false;
         }
-        internal bool IsHit(Point point)
+        private bool IsHit(Point point)
         {
             foreach (Point p in points)
             {
-                p.IsHit(point);
+                if(p.IsHit(point))
                 return true;
             }
             return false;
-        } 
+        }
+        public void Exit()
+        {
+            Environment.Exit(0);
+        }
     }
 }

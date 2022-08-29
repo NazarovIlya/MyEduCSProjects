@@ -68,11 +68,6 @@ namespace Proj0003_Snake
                         break;
                 }
             }
-        public void IsExit(ConsoleKey key)
-        {
-            if (key == ConsoleKey.Escape)
-                Environment.Exit(0);
-        }
         internal bool Eat(Point food)
         {
             Point head = GetNextPoint();
