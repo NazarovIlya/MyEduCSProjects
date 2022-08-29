@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proj0003_Snake
 {
-    internal class Walls
+    internal class Walls : Figure
     {
         List<Figure> wallList;
         public Walls(int mapWidth, int mapHeigth, int upX, char symbol)
@@ -23,7 +23,18 @@ namespace Proj0003_Snake
             wallList.Add(rigthLine);
 
         }
-        public void Draw()
+        internal bool IsHit(Figure figure)
+        {
+            {
+                foreach (var wall in wallList)
+                {
+                    if (wall.IsHit(figure))
+                        return true;
+                }
+                return false;
+            }
+        }
+        public override void Draw()
         {
             foreach(var wall in wallList)
             {

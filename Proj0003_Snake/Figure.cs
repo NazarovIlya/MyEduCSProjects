@@ -16,5 +16,23 @@ namespace Proj0003_Snake
                 p.Draw();
             }
         }
+        internal bool IsHit(Figure figure)
+        {
+            foreach(var p in points)
+            {
+                if(figure.IsHit(p))
+                    return true;
+            }
+            return false;
+        }
+        internal bool IsHit(Point point)
+        {
+            foreach (Point p in points)
+            {
+                p.IsHit(point);
+                return true;
+            }
+            return false;
+        } 
     }
 }

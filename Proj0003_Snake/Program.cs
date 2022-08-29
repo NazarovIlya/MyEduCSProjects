@@ -32,7 +32,11 @@ namespace Proj0003_Snake
             
             while(true)
             {
-                if(snake.Eat(food))
+                if (walls.IsHit(snake) || snake.IsHitTail())
+                {
+                    break;
+                }
+                if (snake.Eat(food))
                 {
                     food = foodCreator.CreateFood();
                     food.Draw();
