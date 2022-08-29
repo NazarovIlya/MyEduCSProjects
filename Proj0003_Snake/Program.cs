@@ -17,31 +17,25 @@ namespace Proj0003_Snake
 
             //
 
-            HorizontalLine lineUp = new HorizontalLine(1, 95, 1, '#');
-            lineUp.DrawLine();
-            HorizontalLine lineDown = new HorizontalLine(1, 95, 33, '#');
-            lineDown.DrawLine();
-            VerticalLine lineLeft = new VerticalLine(1, 33, 1, '#');
-            lineLeft.DrawLine();
-            VerticalLine lineRight = new VerticalLine(1, 33, 95, '#');
-            lineRight.DrawLine();
+            Walls walls = new Walls(96, 35, 1, '#');
+            walls.Draw();
 
             //
 
             Point p = new Point(20, 10);
             Snake snake = new Snake(p, 3, Direction.RIGTH);
-            snake.DrawLine();
+            snake.Draw();
 
             FoodCreator foodCreator = new FoodCreator(95, 34, '@');
             Point food = foodCreator.CreateFood();
-            food.DrawPoint();
+            food.Draw();
             
             while(true)
             {
                 if(snake.Eat(food))
                 {
                     food = foodCreator.CreateFood();
-                    food.DrawPoint();
+                    food.Draw();
                 }
                 else
                 {

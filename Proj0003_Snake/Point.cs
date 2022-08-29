@@ -42,7 +42,7 @@ namespace Proj0003_Snake
                     break;
             }
         }
-        public void DrawPoint()
+        public void Draw()
         {
             Console.SetCursorPosition(X, Y);
             Console.Write(SymbolAnyChar);
@@ -50,7 +50,7 @@ namespace Proj0003_Snake
         public void Clear()
         {
             this.SymbolAnyChar = ' ';
-            DrawPoint();
+            Draw();
         }
         public bool IsHit(Point p)
         {

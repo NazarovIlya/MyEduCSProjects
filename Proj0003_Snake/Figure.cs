@@ -9,11 +9,11 @@ namespace Proj0003_Snake
     internal class Figure
     {
         protected List<Point> points;
-        public void DrawLine()
+        public virtual void Draw()
         {
             foreach (Point p in points)
             {
-                p.DrawPoint();
+                p.Draw();
             }
         }
     }

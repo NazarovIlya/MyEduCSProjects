@@ -17,5 +17,15 @@ namespace Proj0003_Snake
                 points.Add(p);
             }
         }
+        public override void Draw()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            foreach (Point p in points)
+            {
+                p.Draw();
+            }
+            base.Draw();
+            Console.ForegroundColor = ConsoleColor.White;
+        }
     }
 }
