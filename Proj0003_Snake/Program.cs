@@ -34,7 +34,7 @@ namespace Proj0003_Snake
             {
                 if (walls.IsHit(snake) || snake.IsHitTail())
                 {
-                    walls.Exit();
+                    snake.Exit();
                 }
                 if (snake.Eat(food))
                 {
