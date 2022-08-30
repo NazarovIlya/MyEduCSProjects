@@ -36,8 +36,15 @@ namespace Proj0003_Snake
         }
         public void Exit()
         {
-            Console.WriteLine("Game over!!!");
+            Console.Clear();
+            string centerText = "GAME OVER!!!";
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            int centerX = (Console.WindowWidth / 2) - (centerText.Length / 2);
+            int centerY = (Console.WindowHeight / 2) - 1;
+            Console.SetCursorPosition(centerX, centerY);
+            Console.WriteLine(centerText);
             Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.White;
             Environment.Exit(0);
         }
     }
