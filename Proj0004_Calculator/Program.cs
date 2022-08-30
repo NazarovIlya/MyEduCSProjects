@@ -17,8 +17,6 @@ namespace Proj0004_Calculator
             expression.First = input.First;
             expression.Second = input.Second;
             expression.Symbol = input.Symbol;
-            //    public void Action()
-            //    {
             double result = 0;
                 switch (input.Symbol)
                 {
@@ -35,7 +33,6 @@ namespace Proj0004_Calculator
                         result = expression.Division();
                         break;
                 }
-        //    }
             Console.WriteLine(result);
             Console.ReadLine();
         }
