@@ -13,7 +13,7 @@ namespace Proj0004_Calculator
         {
             Input input = new Input();
             input.Read();
-            SwitchAction action = new SwitchAction(input.First, input.Second, input.Symbol);
+            DoAction action = new DoAction(input.First, input.Second, input.Symbol);
             double result = 0;
             result = action.DoAction();
             Console.WriteLine(result);

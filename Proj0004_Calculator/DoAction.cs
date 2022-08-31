@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Proj0004_Calculator
 {
-    internal class SwitchAction : Expression
+    internal class DoAction : Expression
     {
-        public SwitchAction(double first, double second, char symbol)
+        public DoAction(double first, double second, char symbol)
         {
             First = first;
             Second = second;
