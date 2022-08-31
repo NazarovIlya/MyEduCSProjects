@@ -12,27 +12,10 @@ namespace Proj0004_Calculator
         static void Main(string[] args)
         {
             Input input = new Input();
-            Expression expression = new Expression();
             input.Read();
-            expression.First = input.First;
-            expression.Second = input.Second;
-            expression.Symbol = input.Symbol;
+            SwitchAction action = new SwitchAction(input.First, input.Second, input.Symbol);
             double result = 0;
-                switch (input.Symbol)
-                {
-                    case '+':
-                        result = expression.Addition();
-                        break;
-                    case '-':
-                        result = expression.Substraction();
-                        break;
-                    case '*':
-                        result = expression.Multiplication();
-                        break;
-                    case '/':
-                        result = expression.Division();
-                        break;
-                }
+            result = action.DoAction();
             Console.WriteLine(result);
             Console.ReadLine();
         }
