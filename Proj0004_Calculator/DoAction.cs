@@ -15,7 +15,7 @@ namespace Proj0004_Calculator
             Second = second;
             Symbol = symbol;
         }
-        public double DoAction()
+        public double SwitchAction()
         {
             double result = 0;
             switch (Symbol)

@@ -15,7 +15,7 @@ namespace Proj0004_Calculator
             input.Read();
             DoAction action = new DoAction(input.First, input.Second, input.Symbol);
             double result = 0;
-            result = action.DoAction();
+            result = action.SwitchAction();
             Console.WriteLine(result);
             Console.ReadLine();
         }
