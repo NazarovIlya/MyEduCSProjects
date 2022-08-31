@@ -11,7 +11,7 @@ namespace Proj0004_Calculator
         public double First { get; private set; }
         public double Second { get; private set; }
         public char Symbol { get; private set; }
-        public void Read()
+        public void ReadFromConsole()
         {
             string[] strArray = Console.ReadLine().Split(' ');
             First = double.Parse(strArray[0]);
