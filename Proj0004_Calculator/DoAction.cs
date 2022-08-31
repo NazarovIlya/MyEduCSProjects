@@ -7,30 +7,29 @@ using System.Threading.Tasks;
 
 namespace Proj0004_Calculator
 {
-    internal class DoAction : Expression
+    internal class DoAction
     {
+        private readonly Expression _expression;
         public DoAction(double first, double second, char symbol)
         {
-            First = first;
-            Second = second;
-            Symbol = symbol;
+            _expression = new Expression(first, second, symbol);
         }
         public double SwitchAction()
         {
             double result = 0;
-            switch (Symbol)
+            switch (_expression.Symbol)
             {
                 case '+':
-                    result = Addition();
+                    result = _expression.Addition();
                     break;
                 case '-':
-                    result = Substraction();
+                    result = _expression.Substraction();
                     break;
                 case '*':
-                    result = Multiplication();
+                    result = _expression.Multiplication();
                     break;
                 case '/':
-                    result = Division();
+                    result = _expression.Division();
                     break;
             }
             return result;

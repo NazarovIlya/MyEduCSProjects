@@ -8,18 +8,9 @@ namespace Proj0004_Calculator
 {
     internal class Input
     {
-        public double First { get; set; }
-        public double Second { get; set; }
-        public char Symbol { get; set; }
-        public Input(double first, char symbol, double second)
-        {
-            First = first;
-            Second = second;
-            Symbol = symbol;
-        }
-        public Input()
-        {
-        }
+        public double First { get; private set; }
+        public double Second { get; private set; }
+        public char Symbol { get; private set; }
         public void Read()
         {
             string[] strArray = Console.ReadLine().Split(' ');
