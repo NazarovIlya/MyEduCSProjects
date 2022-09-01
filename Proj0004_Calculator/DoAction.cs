@@ -31,6 +31,9 @@ namespace Proj0004_Calculator
                 case '/':
                     result = _expression.Division();
                     break;
+                case '%':
+                    result = _expression.DivisionWithRemainder();
+                    break;
             }
             return result;
         }

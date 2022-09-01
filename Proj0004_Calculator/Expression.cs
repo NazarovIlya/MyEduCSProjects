@@ -36,5 +36,9 @@ namespace Proj0004_Calculator
         {
             return First / Second;
         }
+        public double DivisionWithRemainder()
+        {
+            return Second % First;
+        }
     }
 }
