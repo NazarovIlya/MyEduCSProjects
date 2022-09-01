@@ -10,9 +10,9 @@ namespace Proj0004_Calculator
     internal class DoAction
     {
         private readonly Expression _expression;
-        public DoAction(double first, double second, char symbol)
+        public DoAction()
         {
-            _expression = new Expression(first, second, symbol);
+            _expression = new Expression();
         }
         public double SwitchAction()
         {
@@ -34,6 +34,21 @@ namespace Proj0004_Calculator
             }
             return result;
         }
+        public double DoSomeAction(string[] numberArray)
+        {
+            _expression.First = Convert.ToDouble(numberArray[0]);
+            int i = 0;
+            while (i < numberArray.Length - 1)
+            {
+
+                _expression.Symbol = Convert.ToChar(numberArray[i + 1]);
+                _expression.Second = Convert.ToDouble(numberArray[i + 2]);
+                _expression.First = SwitchAction();
+                i += 2;
+            }
+            return _expression.First;
+        }
+        
 
     }
 }

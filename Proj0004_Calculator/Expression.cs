@@ -9,7 +9,7 @@ namespace Proj0004_Calculator
     internal class Expression
     {
         public double First { get; set; }
-        public double Second { get; set; }
+        public double Second { get;  set; }
         public char Symbol { get; set; }
         public Expression(double first, double second, char symbol)
         {
