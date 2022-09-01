@@ -11,11 +11,10 @@ namespace Proj0004_Calculator
     {
         static void Main(string[] args)
         {
-            //Input input = new Input();
-            //input.ReadFromConsole();
+            Input input = new Input();
             DoAction action = new DoAction();
             double result = 0;
-            string[] strArray = Console.ReadLine().Split(' ');
+            string[] strArray = input.ReadFromConsole();
             result = action.DoSomeAction(strArray);
             Console.WriteLine(result);
             Console.ReadLine();
