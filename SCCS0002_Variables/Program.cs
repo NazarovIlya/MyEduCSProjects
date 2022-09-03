@@ -45,7 +45,7 @@ namespace SCCS0002_Variables
             decimal decimalVarSecond = 45.00000000000056m; // suffix M is necessery
 
             // however, it is possible through casting to the type
-            decimal decimalVarSecond = (decimal)45.00000000000056; // the suffix is not needed 
+            decimal decimalVarSecond2 = (decimal)45.00000000000056; // the suffix is not needed 
 
             /// logical
             bool boolVar;

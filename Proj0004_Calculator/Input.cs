@@ -13,6 +13,7 @@ namespace Proj0004_Calculator
         //public char Symbol { get; private set; }
         public string[] ReadFromConsole()
         {
+            Console.WriteLine("Введите любое математическое выражение, например: 2 + 2 или 2 + 5 + 6 - 10");
             string[] strArray = Console.ReadLine().Split(' ');
             //First = double.Parse(strArray[0]);
             //Symbol = Convert.ToChar(strArray[1]);
