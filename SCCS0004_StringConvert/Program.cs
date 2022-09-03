@@ -25,13 +25,13 @@ string str = "3,14";
 double f = Convert.ToDouble(str);
 Console.WriteLine(f);
 
-//string str = "3.14"; // separator!!!
-//double f = Convert.ToDouble(str);
-//Console.WriteLine(f);
-//NumberFormatInfo numberFormatInfo = new NumberFormatInfo() // using System.Globalization; for use
-//{
-//    NumberDecimalSeparator = ".",
-//};
-//str = "3.14";
+//str = "3.14"; // separator!!!
 //f = Convert.ToDouble(str);
 //Console.WriteLine(f);
+NumberFormatInfo numberFormatInfo = new NumberFormatInfo() // using System.Globalization; for use
+{
+    NumberDecimalSeparator = ".",
+};
+str = "3.14";
+f = Convert.ToDouble(str, numberFormatInfo);
+Console.WriteLine(f);

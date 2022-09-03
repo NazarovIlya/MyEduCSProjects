@@ -9,7 +9,7 @@ namespace SCCS0002_Variables
     internal class Program
     {
         /// <summary>
-        /// Work whit variables
+        /// Work whith variables
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
