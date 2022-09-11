@@ -1,14 +1,14 @@
 ﻿
 Console.Clear();
 
-double a = 0,
-       b = 0,
+double firstValue = 0,
+       secondValue = 0,
        result = 0;
 
 Console.WriteLine("Введите первое число: ");
-a = Convert.ToDouble(Console.ReadLine());
+firstValue = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
-b = Convert.ToDouble(Console.ReadLine());
-result = (a + b) / 2;
-Console.WriteLine($"Среднее арифметическое {a} и {b} = {result}");
+secondValue = Convert.ToDouble(Console.ReadLine());
+result = (firstValue + secondValue) / 2;
+Console.WriteLine($"Среднее арифметическое {firstValue} и {secondValue} = {result}");
 Console.ReadLine();
