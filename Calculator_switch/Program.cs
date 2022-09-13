@@ -1,7 +1,5 @@
 ﻿Console.Clear();
 
-// ConsoleKey consoleKey = Console.ReadKey().Key;
-
 double firstValue = 0;
 double secondValue = 0;
 double result = 0;
@@ -13,9 +11,6 @@ Console.WriteLine("Введите число 1:");
 secondValue = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Выберите действие: '+', '-', '*', '/'");
 action = Console.ReadLine();
-
-
-
 
 switch (action)
 {
