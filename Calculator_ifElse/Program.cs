@@ -35,4 +35,3 @@ else if (action == "/")
 
 Console.WriteLine(result);
 Console.ReadKey();
-Environment.Exit(0);
