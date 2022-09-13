@@ -8,10 +8,19 @@ string action = string.Empty;
 while (true)
 {
     Console.Clear();
-    Console.WriteLine("Введите число 1:");
-    firstValue = Convert.ToDouble(Console.ReadLine());
-    Console.WriteLine("Введите число 1:");
-    secondValue = Convert.ToDouble(Console.ReadLine());
+    try
+    {
+        Console.WriteLine("Введите число 1:");
+        firstValue = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Введите число 1:");
+        secondValue = Convert.ToDouble(Console.ReadLine());
+    }
+    catch (Exception)
+    {
+
+        Console.WriteLine("Не удалось преобразовать строку в число.");
+        continue;
+    }
     Console.WriteLine("Выберите действие: '+', '-', '*', '/'");
     action = Console.ReadLine();
 
