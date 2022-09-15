@@ -19,7 +19,7 @@ while (true)
         continue;
     }
     int evenCount = 0;
-    int oddEvenCount = 0;
+    int oddCount = 0;
     int sumEven = 0;
     int sumAdd = 0;
     while (firstDiapasonNumber <= secondDiapasonNumber)
@@ -32,14 +32,14 @@ while (true)
         }
         else
         {
-            oddEvenCount++;
+            oddCount++;
             sumAdd += firstDiapasonNumber;
             firstDiapasonNumber++;
         }
-            
     }
-    Console.WriteLine($"В диапазоне от {firstDiapasonNumber - (evenCount + oddEvenCount)} до {secondDiapasonNumber} содержится {evenCount} четных чисел и {oddEvenCount} нечетных.");
-    Console.WriteLine($"Сумма всех четных чисел в указанном диапазоне = {sumEven14}, а нечетных = {sumAdd}");   
+    firstDiapasonNumber -= (evenCount + oddCount);
+    Console.WriteLine($"В диапазоне от {firstDiapasonNumber} до {secondDiapasonNumber} содержится {evenCount} четных чисел и {oddCount} нечетных.");
+    Console.WriteLine($"Сумма всех четных чисел в указанном диапазоне = {sumEven}, а нечетных = {sumAdd}");   
     Console.ReadLine();
 }
 
