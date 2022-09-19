@@ -20,12 +20,14 @@ catch
 {
     Console.WriteLine("Ошибка ввода!");
 }
-
+Console.Clear();
 for (int i = 0; i < firstValue; i++)
 {
-    Console.WriteLine("");
+    Console.WriteLine($"Итерация первого цикла #{i}");
     for (int j = 0; j < secondValue; j++)
     {
-
+        Console.WriteLine($"\tИтерация второго цикла #{j}");
+        System.Threading.Thread.Sleep(100);
     }
 }
+Console.ReadLine();
