@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteToConsole", "WriteToCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawRectangleToConsole", "DrawRectangleToConsole\DrawRectangleToConsole.csproj", "{E970662D-D67A-4CE2-AAF0-1E2225B8E4F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandonArray", "RandonArray\RandonArray.csproj", "{BFF6A9D6-51BC-4AB5-ADED-316916BFCFEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E970662D-D67A-4CE2-AAF0-1E2225B8E4F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E970662D-D67A-4CE2-AAF0-1E2225B8E4F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E970662D-D67A-4CE2-AAF0-1E2225B8E4F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF6A9D6-51BC-4AB5-ADED-316916BFCFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF6A9D6-51BC-4AB5-ADED-316916BFCFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF6A9D6-51BC-4AB5-ADED-316916BFCFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF6A9D6-51BC-4AB5-ADED-316916BFCFEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
