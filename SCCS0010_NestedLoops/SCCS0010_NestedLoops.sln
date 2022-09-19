@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawRectangleToConsole", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandonArray", "RandonArray\RandonArray.csproj", "{BFF6A9D6-51BC-4AB5-ADED-316916BFCFEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangles", "Triangles\Triangles.csproj", "{370B2A2B-0743-4570-A268-8B6852D9BB4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BFF6A9D6-51BC-4AB5-ADED-316916BFCFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFF6A9D6-51BC-4AB5-ADED-316916BFCFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFF6A9D6-51BC-4AB5-ADED-316916BFCFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{370B2A2B-0743-4570-A268-8B6852D9BB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{370B2A2B-0743-4570-A268-8B6852D9BB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{370B2A2B-0743-4570-A268-8B6852D9BB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{370B2A2B-0743-4570-A268-8B6852D9BB4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
