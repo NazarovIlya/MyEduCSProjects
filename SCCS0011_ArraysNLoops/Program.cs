@@ -18,6 +18,7 @@ void PrintArray(int[] array)
     }
     Console.WriteLine(" ]");
 }
+
 void PrintReverseArray(int[] array)
 {
     Console.Write("[ ");
@@ -32,18 +33,31 @@ void PrintReverseArray(int[] array)
     Console.WriteLine(" ]");
 }
 
-Console.Write("Введите колчиство элементов массива:\t");
-int countNumbers = 0;
-try
+int GetSumEven(int[] array)
 {
-    countNumbers = Convert.ToInt32(Console.ReadLine());
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0)
+        {
+            sum += array[i];
+        }
+    }
+    return sum;
 }
-catch
-{
-    Console.WriteLine("Ошибка ввода.");
-}
+
 int[] FillArray()
 {
+    Console.Write("Введите колчиство элементов массива:\t");
+    int countNumbers = 0;
+    try
+    {
+        countNumbers = Convert.ToInt32(Console.ReadLine());
+    }
+    catch
+    {
+        Console.WriteLine("Ошибка ввода.");
+    }
     int[] array = new int[countNumbers];
     for (int i = 0; i < countNumbers; i++)
     {
@@ -53,6 +67,21 @@ int[] FillArray()
     return array;
 }
 
+int GetMininmum(int[] array)
+{
+    int min = array[0];
+    for (int i = 1; i < array.Length; i++)
+    {
+        if(array[i] < min)
+            min = array[i];
+    }
+    return min;
+}
+
 int[] arr = FillArray();
 PrintArray(arr);
 PrintReverseArray(arr);
+double resultSum = GetSumEven(arr);
+Console.WriteLine($"Сумма значений элементов массива: {resultSum}");
+int min = GetMininmum(arr);
+Console.WriteLine($"Минимальное значение: {min}");
