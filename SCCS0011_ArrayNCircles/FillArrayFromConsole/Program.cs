@@ -1,5 +1,7 @@
 ﻿// Заполнить массив с клавитуры 
 
+using System;
+
 Console.Clear();
 
 void PrintArray(int[] array)
@@ -14,7 +16,19 @@ void PrintArray(int[] array)
             break;
     }
     Console.WriteLine(" ]");
-
+}
+void PrintReverseArray(int[] array)
+{
+    Console.Write("[ ");
+    for (int i = array.Length - 1; i >= 0; i--)
+    {
+        Console.Write(array[i]);
+        if (i != 0)
+            Console.Write(", ");
+        else
+            break;
+    }
+    Console.WriteLine(" ]");
 }
 
 Console.Write("Введите колчиство элементов массива:\t");
@@ -40,5 +54,6 @@ int[] FillArray()
 
 int[] arr = FillArray();
 PrintArray(arr);
+PrintReverseArray(arr);
 
 //int numbers[] = Console.ReadLine()
