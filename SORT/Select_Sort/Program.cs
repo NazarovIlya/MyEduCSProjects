@@ -24,4 +24,4 @@ int[] SelectSort(int[] array)
 }
 
 int[] sortArray = SelectSort(arr);
-Array.ForEach(sortArray, Console.WriteLine);
+Console.WriteLine($"[ {string.Join(", ", sortArray)} ]");
