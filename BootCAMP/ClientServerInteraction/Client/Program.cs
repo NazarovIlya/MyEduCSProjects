@@ -1,7 +1,7 @@
 ﻿// CLIENT
 namespace Client
 {
-    class Pragram
+    class Program
     {
         static void Main(string[] args)
         {
