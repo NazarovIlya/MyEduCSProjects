@@ -10,12 +10,12 @@ namespace Client
     public class OurClient
     {
         private TcpClient client;
-        StreamReader sReader;
+        StreamWriter sWriter;
 
         public OurClient()
         {
             client = new TcpClient("127.0.0.1", 5555);
-            sReader = new StreamWriter(client.GetStream(), Encoding.UTF8);
+            sWriter = new StreamWriter(client.GetStream(), Encoding.UTF8);
             HandleCommunication();
         }
         void HandleCommunication()
@@ -24,10 +24,9 @@ namespace Client
             {
                 Console.WriteLine("> ");
                 string? msg = Console.ReadLine();
-                sReader.WriteLine(msg);
-                sReader.Flush();
+                sWriter.WriteLine(msg);
+                sWriter.Flush();
             }
         }
-
     }
 }
