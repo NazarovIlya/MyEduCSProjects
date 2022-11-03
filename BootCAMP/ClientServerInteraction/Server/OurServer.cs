@@ -29,10 +29,16 @@ namespace Server
         void HandleClient(TcpClient client)
         {
             StreamReader sReader = new StreamReader(client.GetStream(), Encoding.UTF8);
+            StreamWriter sWriter = new StreamWriter(client.GetStream(), Encoding.UTF8);
             while (true)
             {
                 string msg = sReader.ReadLine();
                 Console.WriteLine($"Client wrote {msg}");
+
+                Console.Write("> ");
+                string answer = Console.ReadLine();
+                sWriter.WriteLine(answer);
+                sWriter.Flush();
             }
         }
     }
