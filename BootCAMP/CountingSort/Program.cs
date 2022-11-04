@@ -23,7 +23,7 @@ int[] CountingSortDigits(int[] array)
     return arraySorted;
 }
 
-
+// Only integer numbers sort
 int[] CountingSortExtended(int[] array)
 {
     int max = array.Max();
