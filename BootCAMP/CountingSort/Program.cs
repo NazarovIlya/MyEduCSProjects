@@ -1,8 +1,9 @@
 ﻿// COUNTING SORT
 
 // Only digits sort
-void CountingSortDigits(int[] array)
+int[] CountingSortDigits(int[] array)
 {
+    int[] arraySorted = new int[array.Length];
     int[] counters = new int[10];
     for (int i = 0; i < array.Length; i++)
     {
@@ -15,15 +16,46 @@ void CountingSortDigits(int[] array)
     {
         for (int j = 0; j < counters[i]; j++)
         {
-            array[index] = i;
+            arraySorted[index] = i;
             index++;
         }
     }
+    return arraySorted;
+}
+
+
+int[] CountingSortExtended(int[] array)
+{
+    int max = array.Max();
+    int[] arraySorted = new int[array.Length];
+    int[] counters = new int[max + 1];
+    for (int i = 0; i < array.Length; i++)
+    {
+        counters[array[i]]++;   // int number = array[i];
+                                // counters[number]++;
+    }
+
+    int index = 0;
+    for (int i = 0; i < counters.Length; i++)
+    {
+        for (int j = 0; j < counters[i]; j++)
+        {
+            arraySorted[index] = i;
+            index++;
+        }
+    }
+    return arraySorted;
 }
 
 
 
-int[] myArr = new[] { 0, 2, 3, 2, 1, 5, 9, 1, 1 };
-Console.WriteLine($"Исходный массив: [ {string.Join(", ", myArr)} ]");
-CountingSortDigits(myArr);
-Console.WriteLine($"Отсортированный массив: [ {string.Join(", ", myArr)} ]");
+int[] myArrDigits = new[] { 0, 2, 3, 2, 1, 5, 9, 1, 1 };
+int[] myArrNumbers = new[] { 6, 31, 13, 13, 2, 7, 1, 6, 2, 1, 46, 24 };
+Console.WriteLine($"Исходный массив: [ {string.Join(", ", myArrDigits)} ]");
+int[] resArrDigits = CountingSortDigits(myArrDigits);
+Console.WriteLine($"Отсортированный массив: [ {string.Join(", ", resArrDigits)} ]");
+Console.WriteLine();
+
+Console.WriteLine($"Исходный массив: [ {string.Join(", ", myArrNumbers)} ]");
+int[] resArrNumbers = CountingSortExtended(myArrNumbers);
+Console.WriteLine($"Отсортированный массив: [ {string.Join(", ", resArrNumbers)} ]");
