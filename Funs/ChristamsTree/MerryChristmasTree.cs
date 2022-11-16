@@ -38,7 +38,6 @@ namespace ChristamsTree
                 }
                 Console.WriteLine();
             }
-
         }
     }
 }
