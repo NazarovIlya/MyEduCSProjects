@@ -1,4 +1,4 @@
-﻿// merry christamas tree be Codaza
+﻿// Merry Christamas Tree by Codaza
 
 
 using System.Media;

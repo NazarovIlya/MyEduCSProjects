@@ -29,8 +29,10 @@ namespace Proj0003_Snake
             FoodCreator foodCreator = new FoodCreator(95, 34, '@');
             Point food = foodCreator.CreateFood();
             food.Draw();
-            
-            while(true)
+
+			int delay = 300;
+			int delta = 10;
+			while (true)
             {
                 if (walls.IsHit(snake) || snake.IsHitTail())
                 {
@@ -40,14 +42,15 @@ namespace Proj0003_Snake
                 {
                     food = foodCreator.CreateFood();
                     food.Draw();
-                }
+                    delay -= delta;
+				}
                 else
                 {
                     snake.Move();
-                }
-                Thread.Sleep(250);
+				}
+				Thread.Sleep(delay);
 
-                if (Console.KeyAvailable)
+				if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.Control(key.Key);
